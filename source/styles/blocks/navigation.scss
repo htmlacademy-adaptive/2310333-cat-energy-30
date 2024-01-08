@@ -1,0 +1,16 @@
+.navigation {
+
+  @include text-options("Oswald", 20px, 100%, #000, uppercase);
+
+  &__toggle {
+
+  }
+  &.navigation__toggle--open {
+
+  }
+
+  &.navigation__toggle--close {
+
+  }
+
+}

@@ -1,0 +1,12 @@
+.product-card {
+
+  &__title {
+    @include text-options("Oswald", 16px, 125%, #222, none);
+  }
+
+  &__list {
+    font-size: 12px;
+    line-height: 133.333;
+  }
+
+}

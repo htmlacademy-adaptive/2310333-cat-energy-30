@@ -1,0 +1,35 @@
+.button {
+  background-color: #68b738;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+
+  &--hero {
+    font-size: 16px;
+    line-height: 125%;
+  }
+
+  &--tasks {
+    font-size: 16px;
+    line-height: 100%;
+    color: #000;
+    background-color: transparent;
+  }
+
+  &--product {
+    font-size: 16px;
+    line-height: 125%;
+  }
+
+  &--more {
+    background-color: #f2f2f2;
+    color: #444;
+  }
+
+  &--form {
+    font-size: 16px;
+    line-height: 125%;
+  }
+
+}

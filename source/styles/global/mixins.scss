@@ -1,0 +1,8 @@
+@mixin text-options($font-family, $font-size, $line-height, $color, $text-transform) {
+    font-family: $font-family, sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+    text-transform: $text-transform;
+}
+

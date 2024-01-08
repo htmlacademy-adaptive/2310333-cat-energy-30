@@ -1,0 +1,22 @@
+.body-container {
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  min-height: 100%;
+  margin: 0 auto;
+  &__header,
+  &__main,
+  &__footer {
+    width: 1220px;
+    margin: 0 auto;
+  }
+  &__main {
+    flex-grow: 1;
+  }
+  &__header,
+  &__footer {
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+}
+

@@ -1,0 +1,11 @@
+.section-contacts {
+
+  &__title {
+    @include text-options("Oswald", 16px, 125%, #000, uppercase);
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 142.857%;
+  }
+}

@@ -1,0 +1,9 @@
+.section-programm {
+  &__title {
+    @include text-options("Oswald", 36px, 100%, #000, none);
+  }
+
+  &__text {
+    @include text-options("Oswald", 14px, 128.571%, #000, uppercase);
+  }
+}
