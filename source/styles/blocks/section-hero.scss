@@ -1,0 +1,11 @@
+.section-hero {
+  background-color: #68b738;
+
+  &__title {
+    @include text-options("Oswald", 36px, 100%, #fff, none);
+  }
+
+  &__text {
+    @include text-options("Oswald", 14px, 100%, #fff, uppercase);
+  }
+}

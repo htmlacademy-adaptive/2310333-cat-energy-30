@@ -1,0 +1,22 @@
+.section-additionals {
+
+  &__title {
+    @include text-options("Oswald", 24px, 100%, #000, none);
+  }
+
+  &__termin {
+    @include text-options("Oswald", 16px, 100%, #222, uppercase);
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+  }
+
+}

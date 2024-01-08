@@ -1,0 +1,9 @@
+.programm-form {
+  @include text-options("Oswald", 16px, 112.5%, #444, uppercase);
+  &__title {
+    @include text-options("Oswald", 24px, 108.333%, #000, none);
+  }
+  &__text-secondary {
+    @include text-options("Lato", 14px, 114.286%, #000, none);
+  }
+}

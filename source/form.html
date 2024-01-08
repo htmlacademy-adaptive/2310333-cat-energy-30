@@ -48,77 +48,82 @@
   </header>
 
   <main>
-    <section class="section-programm">
-      <h1 class="section-programm__title">Подбор программы</h1>
-      <p class="section-programm__text">Заполните анкету, и мы подберём<br> программу питания для вашего кота</p>
-      <form class="section-programm__form programm-form" method="post" action="https://echo.htmlacademy.ru/">
-        <fieldset class="programm-form__about-cat">
-          <label class="programm-form__label" for="">
-            <span class="programm-form__text">Имя:*</span>
-            <input class="programm-form__input" type="text" value="Барсик">
-          </label>
-          <label class="programm-form__label" for="">
-            <span class="programm-form__text">Вес(кг):*</span>
-            <input class="programm-form__input" type="text" value="7">
-          </label>
-          <label class="programm-form__label" for="">
-            <span class="programm-form__text">Возраст(лет):</span>
-            <input class="programm-form__input" type="text" value="7">
-          </label>
-        </fieldset>
-        <fieldset class="programm-form__about-programm">
-          <label class="programm-form__label">
-            <input class="programm-form__input" type="radio" name="radio-task">
-            <span class="programm-form__text">Похудение</span>
-          </label>
-          <label class="programm-form__label">
-            <input class="programm-form__input" type="radio" name="radio-task">
-            <span class="programm-form__text">Набор массы</span>
-          </label>
-          <label class="programm-form__label">
-            <input class="programm-form__input" type="radio" name="radio-task">
-            <span class="programm-form__text">Не знаю (нужен ваш совет)</span>
-          </label>
-        </fieldset>
-        <fieldset class="programm-form__about-owner">
-          <legend class="programm-form__subtitle">Контактные данные (владельца кота)</legend>
-          <label class="programm-form__label">
-            <span class="programm-form__text">E-mail:*</span>
-            <input class="programm-form__input" type="text">
-          </label>
-          <label class="programm-form__label">
-            <span class="programm-form__text">Телефон:*</span>
-            <input class="programm-form__input" type="text">
-          </label>
-        </fieldset>
-        <fieldset class="programm-form__comment">
-          <legend class="programm-form__subtitle">Комментарий</legend>
-          <label class="programm-form__label">
-            <textarea cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
-          </label>
-        </fieldset>
-        <fieldset class="programm-form__extra">
-          <legend class="programm-form__subtitle">Дополнительно</legend>
-          <label for="" class="programm-form__label">
-            <span class="programm-form__text">Сахарозаменитель</span>
-            <input class="programm-form__input" type="checkbox" name="no-sugar">
-          </label>
-          <label for="" class="programm-form__label">
-            <span class="programm-form__text">Питьевая вода</span>
-            <input class="programm-form__input" type="checkbox" name="water">
-          </label>
-          <label for="" class="programm-form__label">
-            <span class="programm-form__text">Молоко</span>
-            <input class="programm-form__input" type="checkbox" name="milk">
-          </label>
-          <label for="" class="programm-form__label">
-            <span class="programm-form__text">Витамины</span>
-            <input class="programm-form__input" type="checkbox" name="vitamins">
-          </label>
-          <input class="programm-form__button button" type="submit" value="Отправить заявку">
-          <p class="programm-form__text-secondary">*-Обязательные поля</p>
-        </fieldset>
-      </form>
+    <section class="section">
+      <div class="section__programm section-programm">
+        <h1 class="section-programm__title">Подбор программы</h1>
+        <p class="section-programm__text">Заполните анкету, и мы подберём<br> программу питания для вашего кота</p>
+        <form class="section-programm__form programm-form" method="post" action="https://echo.htmlacademy.ru/">
+          <fieldset class="programm-form__about-cat">
+            <div class="programm-form__wrapper">
+              <label class="programm-form__label" for="">
+                <span class="programm-form__text">Имя:*</span>
+                <input class="programm-form__input" type="text" value="Барсик">
+              </label>
+              <label class="programm-form__label" for="">
+                <span class="programm-form__text">Вес(кг):*</span>
+                <input class="programm-form__input" type="text" value="7">
+              </label>
+              <label class="programm-form__label" for="">
+                <span class="programm-form__text">Возраст(лет):</span>
+                <input class="programm-form__input" type="text" value="7">
+              </label>
+            </div>
+            <div class="programm-form__wrapper">
+              <label class="programm-form__label">
+                <input class="programm-form__input" type="radio" name="radio-task">
+                <span class="programm-form__text">Похудение</span>
+              </label>
+              <label class="programm-form__label">
+                <input class="programm-form__input" type="radio" name="radio-task">
+                <span class="programm-form__text">Набор массы</span>
+              </label>
+              <label class="programm-form__label">
+                <input class="programm-form__input" type="radio" name="radio-task">
+                <span class="programm-form__text">Не знаю (нужен ваш совет)</span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="programm-form__about-owner">
+            <legend class="programm-form__title">Контактные данные (владельца кота)</legend>
+            <label class="programm-form__label">
+              <span class="programm-form__text">E-mail:*</span>
+              <input class="programm-form__input" type="text">
+            </label>
+            <label class="programm-form__label">
+              <span class="programm-form__text">Телефон:*</span>
+              <input class="programm-form__input" type="text">
+            </label>
+          </fieldset>
+          <fieldset class="programm-form__comment">
+            <legend class="programm-form__title">Комментарий</legend>
+            <label class="programm-form__label">
+              <textarea cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+            </label>
+          </fieldset>
+          <fieldset class="programm-form__extra">
+            <legend class="programm-form__title">Дополнительно</legend>
+            <label for="" class="programm-form__label">
+              <span class="programm-form__text">Сахарозаменитель</span>
+              <input class="programm-form__input" type="checkbox" name="no-sugar">
+            </label>
+            <label for="" class="programm-form__label">
+              <span class="programm-form__text">Питьевая вода</span>
+              <input class="programm-form__input" type="checkbox" name="water">
+            </label>
+            <label for="" class="programm-form__label">
+              <span class="programm-form__text">Молоко</span>
+              <input class="programm-form__input" type="checkbox" name="milk">
+            </label>
+            <label for="" class="programm-form__label">
+              <span class="programm-form__text">Витамины</span>
+              <input class="programm-form__input" type="checkbox" name="vitamins">
+            </label>
+          </fieldset>
+          <fieldset class="programm-form__submit">
+            <input class="programm-form__button button button--form" type="submit" value="Отправить заявку">
+            <p class="programm-form__text-secondary">*-Обязательные поля</p>
+          </fieldset>
+        </form>
     </section>
     <section class="section-contacts">
       <article class="section-contacts__article">
@@ -128,6 +133,7 @@
           <span class="section-contacts__address">Санкт-Петербург</span>
         </p>
       </article>
+      </div>
     </section>
   </main>
 

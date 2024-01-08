@@ -1,0 +1,7 @@
+.section-catalog {
+
+  &__title {
+    @include text-options("Oswald", 36px, 100%, #000, none);
+  }
+
+}

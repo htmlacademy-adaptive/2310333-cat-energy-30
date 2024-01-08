@@ -1,0 +1,11 @@
+.section-tasks {
+
+  &__title {
+    @include text-options("Oswald", 24px, 154.167%, #000, uppercase);
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 128.571%;
+  }
+}

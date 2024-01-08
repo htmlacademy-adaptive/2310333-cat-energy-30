@@ -1,0 +1,28 @@
+.section-example {
+  font-family: "Oswald", sans-serif;
+  color: #000;
+
+  &__title {
+    font-size: 36px;
+    line-height: 111.111%;
+  }
+
+  &__text-primary {
+    @include text-options("Lato", 14px, 128.571%, #444, none);
+  }
+
+  &__termin {
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+  &__description {
+    @include text-options("Lato", 12px, 100%, #444, lowercase);
+  }
+
+  &__text-secondary {
+    font-size: 14px;
+    line-height: 142.857%;
+    text-transform: uppercase;
+  }
+}
