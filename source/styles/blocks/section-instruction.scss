@@ -9,4 +9,35 @@
     line-height: 128.571%;
   }
 
+  &__image {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #68B738;
+  }
+
+  &__image--natural {
+    background-image: url('../../images/icons/stack.svg#natural');
+    background-repeat: no-repeat;
+    background-size: 25px 28px;
+  }
+
+  &__image--simple {
+    background-image: url('../../images/icons/stack.svg#simple');
+    background-repeat: no-repeat;
+    background-size: 26px 29px;
+  }
+
+  &__image--useful {
+    background-image: url('../../images/icons/stack.svg#useful');
+    background-repeat: no-repeat;
+    background-size: 25px 30px;
+  }
+
+  &__image--resultative {
+    background-image: url('../../images/icons/stack.svg#resultative');
+    background-repeat: no-repeat;
+    background-size: 26px 31px;
+  }
+
 }

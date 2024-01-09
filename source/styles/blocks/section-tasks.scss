@@ -8,4 +8,22 @@
     font-size: 14px;
     line-height: 128.571%;
   }
+
+  &__image--slim-cat {
+    background-image: url('../../images/icons/stack.svg#cat-slim');
+    background-repeat: no-repeat;
+    background-size: 36px 50px;
+  }
+
+  &__image--pro-cat {
+    background-image: url('../../images/icons/stack.svg#cat-pro');
+    background-repeat: no-repeat;
+    background-size: 67px 28px;
+  }
+
+  &__link-icon {
+    mask-image: url('../../images/icons/stack.svg#arrow.svg');
+    mask-repeat: no-repeat;
+    mask-size: 32px 10px;
+  }
 }
