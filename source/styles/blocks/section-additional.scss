@@ -19,4 +19,17 @@
     color: #fff;
   }
 
+  &__wrapper {
+    background-color: #68B738;
+    background-image: url("../../images/gift-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__gift-icon {
+    background-image: url("../../images/icons/stack.svg#gift");
+    background-repeat: no-repeat;
+    background-size: 57px 61px;
+  }
+
 }

@@ -1,0 +1,31 @@
+.socials {
+
+  &__link {
+    display: block;
+    width: 28px;
+    height: 22px;
+  }
+
+  &__icon {
+    display: block;
+
+  }
+
+  &__icon--vk {
+    mask-image: url('../../images/icons/stack.svg#socials-vk');
+    mask-repeat: no-repeat;
+    mask-size: 27px 17px;
+  }
+
+  &__icon--youtube {
+    mask-image: url('../../images/icons/stack.svg#socials-yt');
+    mask-repeat: no-repeat;
+    mask-size: 24px 19px;
+  }
+
+  &__icon--telegram {
+    mask-image: url('../../images/icons/stack.svg#socials-tg');
+    mask-repeat: no-repeat;
+    mask-size: 20px 17px;
+  }
+}
