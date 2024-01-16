@@ -1,28 +1,66 @@
 .section-example {
-  font-family: "Oswald", sans-serif;
-  color: #000;
+
+  background-color: #EAEAEA;
+
+  &__container {
+    padding-top: 25px;
+  }
 
   &__title {
-    font-size: 36px;
-    line-height: 111.111%;
+    @include text-options("Oswald", 36px, 111.111%, #000, none);
+    margin-bottom: 40px;
   }
 
   &__text-primary {
     @include text-options("Lato", 14px, 128.571%, #444, none);
+    margin-bottom: 20px;
   }
 
-  &__termin {
-    font-size: 24px;
-    line-height: 100%;
+  &__list {
+    display: flex;
+    gap: 32px
   }
 
-  &__description {
-    @include text-options("Lato", 12px, 100%, #444, lowercase);
+  &__item {
+    @include text-options("Oswald", 24px, 100%, #000, none);
+    width: 124px;
+    height: 56px;
+    border: 1px solid #CDCDCD;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    &::after {
+      content: "";
+      @include text-options("Lato", 12px, 100%, #444, lowercase);
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -35%);
+      background-color: #EAEAEA;
+      z-index: 2;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &--weight::after {
+      content: "снижение веса";
+    }
+
+    &--days::after {
+      content: "затрачено времени";
+    }
   }
 
   &__text-secondary {
-    font-size: 14px;
-    line-height: 142.857%;
-    text-transform: uppercase;
+    @include text-options("Oswald", 14px, 142.857%, #000, uppercase);
+    text-align: center;
   }
+
+  &__wrapper {
+    margin-bottom: 20px;
+  }
+
 }

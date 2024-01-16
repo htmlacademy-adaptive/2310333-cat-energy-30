@@ -1,11 +1,20 @@
 .section-contacts {
 
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
   &__title {
     @include text-options("Oswald", 16px, 125%, #000, uppercase);
+    flex-shrink: 0;
   }
 
   &__text {
     font-size: 14px;
     line-height: 142.857%;
+    flex-shrink: 0;
   }
 }

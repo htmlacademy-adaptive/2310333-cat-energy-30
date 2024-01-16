@@ -1,9 +1,14 @@
 .button {
-  background-color: #68b738;
+  display: block;
+  background-color: $primary-button-color;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
   color: #fff;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   &--hero {
     font-size: 16px;
@@ -30,6 +35,16 @@
   &--form {
     font-size: 16px;
     line-height: 125%;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--hero {
+      width: 244px;
+      font-size: 20px;
+      line-height: 130%;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
   }
 
 }

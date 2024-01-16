@@ -1,8 +1,23 @@
 .html-logo {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__text-part {
+    @include text-options("Lato", 16px, 125%, #444, none);
+    text-decoration: none;
+  }
+
+  &__icon-part {
+    text-decoration: none;
+  }
 
   &__text {
-    font-size: 16px;
-    line-height: 125%;
+
+  }
+
+  &__icon {
+
   }
 
 }
