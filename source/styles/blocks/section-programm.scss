@@ -1,9 +1,45 @@
 .section-programm {
+  padding-top: 27px;
+  padding-bottom: 32px;
+
   &__title {
     @include text-options("Oswald", 36px, 100%, #000, none);
+    margin-bottom: 37px;
   }
 
   &__text {
     @include text-options("Oswald", 14px, 128.571%, #000, uppercase);
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 60px;
+
+    &__container {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+
+    &__title {
+      font-size: 60px;
+      margin-bottom: 54px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 150%;
+      margin-bottom: 66px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 74px;
+    padding-bottom: 79px;
+
+    &__container {
+      padding-left: 110px;
+      padding-right: 110px;
+    }
   }
 }

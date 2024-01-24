@@ -1,16 +1,48 @@
 .navigation {
+  display: flex;
+  align-items: center;
+  z-index: 3;
 
-  @include text-options("Oswald", 20px, 100%, #000, uppercase);
-
-  &__toggle {
-
+  &__list {
+    @include text-options("Oswald", 20px, 100%, #000, uppercase);
+    display: none;
+    flex-basis: 198px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
-  &.navigation__toggle--open {
 
+  &__item {
+    flex-shrink: 0;
   }
 
-  &.navigation__toggle--close {
+  /*&__toggle:hover .navigation__list {
+    display: flex;
 
+  }*/
+
+  @media (min-width: $tablet-width) {
+    width: 436px;
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-basis: 436px;
+      font-size: 18px;
+      line-height: 133.333%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
   }
 
+  @media (min-width: $desktop-width) {
+    width: 475px;
+    &__list {
+      flex-basis: 475px;
+      font-size: 20px;
+      line-height: 100%;
+    }
+    &__list--index {
+      color: #fff;
+    }
+  }
 }

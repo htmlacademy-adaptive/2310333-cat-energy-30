@@ -1,9 +1,425 @@
 .programm-form {
   @include text-options("Oswald", 16px, 112.5%, #444, uppercase);
+
+//FIELDSET - about-cat
+
   &__title {
     @include text-options("Oswald", 24px, 108.333%, #000, none);
   }
+
+  &__about-cat {
+    margin-bottom: 26px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    &--cat {
+      padding-bottom: 24px;
+      margin-bottom: 22px;
+    }
+    &--tasks {
+      padding-bottom: 19px;
+    }
+  }
+
+  &__label,
+  &__input {
+    @include text-options("Oswald", 16px, 112.5%, #444, uppercase);
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label--cat:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  &__label--tasks:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  &__text {
+    flex-shrink: 0;
+  }
+
+  &__text--cat {
+    margin-right: 13px;
+  }
+
+  &__text--tasks {
+    margin-left: 15px;
+  }
+
+  &__input--text {
+    width: 100%;
+    border: 1px solid #E7E7E7;
+    border-radius: none;
+    padding: 14px 14px 13px 15px;
+  }
+
+  &__custom-radio {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #CDCDCD;
+    border-radius: 50%;
+  }
+
+  &__input--radio,
+  &__input--checkbox {
+    position: absolute;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  &__input--radio:checked + &__custom-radio::after {
+    content: "";
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: $primary-button-color;
+  }
+
+//FIELDSET - about-owner
+  &__about-owner {
+    margin-bottom: 24px;
+  }
+
+  &__title--owner {
+    margin-bottom: 35px;
+  }
+
+  &__label--owner:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  &__text--owner {
+    margin-right: 13px;
+  }
+
+  &__label--owner-email,
+  &__label--owner-phone {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 14px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__label--owner-email::after {
+    width: 17px;
+    height: 13px;
+    background-image: url("../../images/icons/stack.svg#email");
+    background-size: 17px auto;
+  }
+
+  &__label--owner-phone::after {
+    width: 15px;
+    height: 15px;
+    background-image: url("../../images/icons/stack.svg#phone");
+    background-size: 15px auto;
+  }
+
+//FIELDSET - comment
+  &__comment {
+    margin-bottom: 23px;
+  }
+
+  &__title--comment {
+    margin-bottom: 38px;
+  }
+
+  &__input--comment {
+    max-height: 150px;
+  }
+
+//FIELDSET - extra
+  &__extra {
+    margin-bottom: 34px;
+  }
+
+  &__title--extra {
+    margin-bottom: 34px;
+  }
+
+  &__label--extra:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  &__text--extra {
+    margin-left: 15px;
+  }
+
+  &__custom-checkbox {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #CDCDCD;
+  }
+
+  &__input--checkbox:checked + &__custom-checkbox::after {
+    content: "";
+    width: 18px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../images/icons/stack.svg#checkbox");
+    background-repeat: no-repeat;
+    background-size: 18px auto;
+  }
+
+  &__button {
+    width: 100%;
+    margin-bottom: 21px;
+  }
+
   &__text-secondary {
     @include text-options("Lato", 14px, 114.286%, #000, none);
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    &__title {
+      font-size: 36px;
+      line-height: 100%;
+    }
+
+    &__about-cat {
+      margin-bottom: 65px;
+    }
+
+    &__wrapper {
+      &--cat {
+        padding-bottom: 0;
+        margin-bottom: 72px;
+      }
+      &--tasks {
+        border: 1px solid #E7E7E7;
+        padding: 23px 27px 27px 27px;
+      }
+    }
+
+    &__label,
+    &__input {
+      font-size: 20px;
+      line-height: 100%;
+    }
+
+    &__label--cat:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &__text--tasks {
+      margin-left: 20px;
+    }
+
+    &__input--text {
+      padding: 11px 20px 11px 20px;
+    }
+
+    &__custom-radio {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__input--radio:checked + &__custom-radio::after {
+      width: 18px;
+      height: 18px;
+    }
+
+    &__about-owner {
+      margin-bottom: 65px;
+    }
+
+    &__title--owner {
+      margin-bottom: 76px;
+    }
+
+    &__label--owner:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &__label--owner-email::after,
+    &__label--owner-phone::after {
+      right: 15px;
+    }
+
+    &__comment {
+      margin-bottom: 65px;
+    }
+
+    &__title--comment {
+      margin-bottom: 87px;
+    }
+
+    &__input--comment {
+      max-height: 175px;
+    }
+
+    &__extra {
+      margin-bottom: 60px;
+    }
+
+    &__title--extra {
+      margin-bottom: 57px;
+    }
+
+    &__custom-checkbox {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__input--checkbox:checked + &__custom-checkbox::after {
+      width: 24px;
+      height: 19px;
+      background-size: 24px auto;
+    }
+
+    &__extra {
+      width: 100%;
+      display: flex;
+      column-gap: 60px;
+      row-gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    &__label--extra:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &__label--extra {
+      width: 280px;
+    }
+
+    &__submit {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 60px;
+      align-items: center;
+    }
+
+    &__button {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-bottom: 0;
+    }
+
+    &__text-secondary {
+      font-size: 16px;
+      line-height: 100%;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+  }
+
+  @media (min-width: $desktop-width) {
+
+    &__about-cat {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 80px;
+      margin-bottom: 70px;
+    }
+
+    &__wrapper {
+      &--cat {
+        margin-bottom: 0;
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+      &--tasks {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+    }
+
+    &__about-owner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 80px;
+      margin-bottom: 70px;
+    }
+
+    &__title--owner {
+      grid-column: 1/3;
+      grid-row: 1/2;
+      margin-bottom: 76px;
+    }
+
+    &__label--owner:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &__label--owner-email {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+
+    &__label--owner-phone {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+
+    &__label--owner-email::after,
+    &__label--owner-phone::after {
+      right: 17px;
+    }
+
+    &__comment {
+      margin-bottom: 70px;
+    }
+
+    &__title--comment {
+      margin-bottom: 78px;
+    }
+
+    &__extra {
+      align-items: center;
+      column-gap: 80px;
+      flex-wrap: wrap;
+    }
+
+    &__label--extra {
+      width: 245px;
+    }
+
+    &__submit {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 80px;
+      align-items: center;
+    }
+
+    &__button {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-bottom: 0;
+    }
+
+    &__text-secondary {
+      font-size: 16px;
+      line-height: 100%;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      text-align: left;
+    }
+
   }
 }

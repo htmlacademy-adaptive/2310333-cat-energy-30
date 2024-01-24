@@ -1,1 +1,40 @@
+.header {
+  flex-shrink: 0;
+  flex-grow: 0;
 
+  &__container {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__cat-logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    flex-shrink: 0;
+  }
+
+  &__cat-logo-icon {
+
+  }
+
+  &__cat-logo-text {
+
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    &__cat-logo-wrapper {
+      gap: 13px;
+    }
+  }
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+    padding-bottom: 29px;
+  }
+}

@@ -16,10 +16,12 @@ body {
   font-weight: 400;
   color: #444;
   background-color: #fff;
+  margin: 0;
 }
 
 :where(ul, ol):where([class]) {
   padding-left: 0;
+  margin: 0;
 }
 
 :where(dd[class]) {
@@ -30,7 +32,8 @@ body {
   list-style: none;
 }
 
-img {
+img,
+source {
   display: block;
   max-width: 100%;
   height: auto;
@@ -43,4 +46,32 @@ button {
   font: inherit;
 }
 
+input[type=radio] {
+  margin: 0;
+}
 
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input[type=submit] {
+  border: none;
+}
+
+fieldset {
+  border: none;
+}

@@ -8,24 +8,28 @@
 
   &__icon {
     display: block;
-
+    background-color: #666666;
+    mask-position: bottom;
   }
 
   &__icon--vk {
-    mask-image: url('../../images/icons/stack.svg#socials-vk');
+    mask-image: url("../../images/icons/stack.svg#socials-vk");
     mask-repeat: no-repeat;
-    mask-size: 27px 17px;
+    width: 27px;
+    height: 17px;
   }
 
   &__icon--youtube {
-    mask-image: url('../../images/icons/stack.svg#socials-yt');
+    mask-image: url("../../images/icons/stack.svg#socials-yt");
     mask-repeat: no-repeat;
-    mask-size: 24px 19px;
+    width: 24px;
+    height: 19px;
   }
 
   &__icon--telegram {
-    mask-image: url('../../images/icons/stack.svg#socials-tg');
+    mask-image: url("../../images/icons/stack.svg#socials-tg");
     mask-repeat: no-repeat;
-    mask-size: 20px 17px;
+    width: 20px;
+    height: 17px;
   }
 }

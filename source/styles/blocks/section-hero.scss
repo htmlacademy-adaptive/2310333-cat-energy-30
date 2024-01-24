@@ -1,11 +1,155 @@
 .section-hero {
-  background-color: #68b738;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 302px;
+    background-color: #62A63B;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__not-beauty-but-working {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 302px;
+    background-image: url("../../images/cat-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    @media (min-resolution: 2dppx) {
+    background-image: url("../../images/cat-background-mobile@2x.jpg");
+    background-size: 320px auto;
+    z-index: 2;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 302px;
+      background-color: $primary-button-color;
+      opacity: 0.85;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__container {
+    display: grid;
+    margin-bottom: 20px;
+    padding-top: 27px;
+  }
 
   &__title {
     @include text-options("Oswald", 36px, 100%, #fff, none);
+    grid-column: 1/3;
+    grid-row: 1/2;
+    margin-top: 0;
+    margin-bottom: 22px;
+    text-align: center;
+    z-index: 2;
   }
 
   &__text {
     @include text-options("Oswald", 14px, 100%, #fff, uppercase);
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-bottom: 29px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  &__picture {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    margin-bottom: 3px;
+    z-index: 2;
+  }
+
+  &__link {
+    grid-column: 1/3;
+    grid-row: 4/5;
+    z-index: 2;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      display: none;
+    }
+
+    &__container {
+      grid-template-columns: 90px auto;
+    }
+
+    &__not-beauty-but-working {
+      display: none;
+    }
+
+    &__title {
+      font-size: 60px;
+      color: #000;
+      text-align: left;
+      grid-column: 2/3;
+      margin-bottom: 40px;
+    }
+
+    &__text {
+      font-size: 20px;
+      color: #000;
+      text-align: left;
+      grid-column: 2/3;
+      margin-bottom: 21px;
+    }
+
+    &__link {
+      width: 244px;
+      grid-column: 2/3;
+      grid-row: 3/4;
+      margin-top: 29px;
+    }
+
+    &__picture {
+      grid-row: 3/5;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+
+    &__container {
+      grid-template-columns: 80px auto;
+    }
+
+    &__not-beauty-but-working {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: calc(50% + 520px);
+      width: 1040px;
+      height: 694px;
+      background-image: url("../../images/cat-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-color: $primary-button-color;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../images/cat-background-desktop@2x.jpg");
+        background-size: 1040px auto;
+      }
+      &::after {
+        height: 100%;
+      }
+    }
+
+    &__title {
+      margin-top: 81px;
+    }
+
+    &__picture {
+      grid-row: 1/5;
+      margin-left: 447px;
+    }
   }
 }

@@ -1,29 +1,203 @@
 .section-tasks {
 
+  margin-bottom: 20px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+  }
+
   &__title {
     @include text-options("Oswald", 24px, 154.167%, #000, uppercase);
+    margin-top: 0;
+    margin-bottom: 29px;
+    margin-left: 90px;
   }
 
   &__text {
     font-size: 14px;
     line-height: 128.571%;
+    margin-bottom: 23px;
   }
 
-  &__image--slim-cat {
-    background-image: url('../../images/icons/stack.svg#cat-slim');
-    background-repeat: no-repeat;
-    background-size: 36px 50px;
+  &__wrapper {
+    position: relative;
+    padding: 30px 20px 18px 20px;
+    background-color: #F2F2F2;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: #68B738;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    &--slim-cat::after {
+      content: "";
+      position: absolute;
+      width: 36px;
+      height: 50px;
+      top: 21px;
+      left: 27px;
+      background-image: url("../../images/icons/stack.svg#cat-slim");
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+
+    &--pro-cat::after {
+      content: "";
+      position: absolute;
+      width: 67px;
+      height: 28px;
+      top: 35px;
+      left: 13px;
+      background-image: url("../../images/icons/stack.svg#cat-pro");
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
   }
 
-  &__image--pro-cat {
-    background-image: url('../../images/icons/stack.svg#cat-pro');
-    background-repeat: no-repeat;
-    background-size: 67px 28px;
+  &__decor-line {
+    display: block;
+    width: 240px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #D9D9D9;
+    margin-bottom: 15px;
   }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 134px;
+    padding: 4px 0;
+    margin: 0;
+    text-align: left;
+    &::after {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 10px;
+      background-image: url("../../images/icons/stack.svg#arrow");
+      background-repeat: no-repeat;
+    }
+  }
+
 
   &__link-icon {
-    mask-image: url('../../images/icons/stack.svg#arrow.svg');
+    width: 32px;
+    height: 10px;
+    mask-image: url("../../images/icons/stack.svg#arrow");
+    -webkit-mask-image: url("../../images/icons/stack.svg#arrow.svg");
     mask-repeat: no-repeat;
-    mask-size: 32px 10px;
+    -webkit-mask-repeat: no-repeat;
+    background-color: #000;
+  }
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: 45px;
+
+    &__wrapper {
+      padding: 77px 52px 53px 52px;
+
+      &::before {
+        width: 200px;
+        height: 200px;
+        top: 92px;
+        left: 445px;
+      }
+
+      &--slim-cat::after {
+        width: 140px;
+        height: 194px;
+        top: 81px;
+        left: 475px;
+      }
+
+      &--pro-cat::after {
+        width: 268px;
+        height: 112px;
+        top: 135px;
+        left: 411px;
+      }
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 100%;
+      margin-left: 0;
+      margin-bottom: 24px;
+    }
+
+    &__text {
+      width: 330px;
+      font-size: 16px;
+      line-height: 150%;
+      color: #000;
+      margin-bottom: 48px;
+    }
+
+    &__decor-line {
+      display: none;
+    }
+
+    &__link {
+      width: 165px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
+
+    &__container {
+      flex-direction: row;
+      gap: 80px;
+    }
+
+    &__wrapper {
+      width: 570px;
+      padding-bottom: 55px;
+
+      &::before {
+        width: 100px;
+        height: 100px;
+        top: 47px;
+        left: 52px;
+      }
+
+      &--slim-cat::after {
+        width: 70px;
+        height: 97px;
+        top: 41px;
+        left: 67px;
+      }
+
+      &--pro-cat::after {
+        width: 134px;
+        height: 56px;
+        top: 67px;
+        left: 33px;
+      }
+    }
+
+    &__title {
+      margin-left: 214px;
+      margin-bottom: 73px;
+    }
+
+    &__text {
+      width: auto;
+      margin-bottom: 23px;
+    }
+
+    &__link {
+      width: 168px;
+    }
   }
 }

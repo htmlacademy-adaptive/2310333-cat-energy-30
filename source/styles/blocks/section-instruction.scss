@@ -1,43 +1,185 @@
 .section-instruction {
+  margin-bottom: 49px;
+
+  &__container {
+
+  }
 
   &__title {
     @include text-options("Oswald", 36px, 111.111%, #000, none);
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    &::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-color: #68B738;
+      flex-shrink: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 17px;
+    }
+
+    &--natural {
+      grid-column: 1/5;
+      grid-row: 1/2;
+      &::after {
+        width: 25px;
+        height: 28px;
+        background-image: url("../../images/icons/stack.svg#natural");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--simple {
+      grid-column: 1/5;
+      grid-row: 2/3;
+      &::after {
+        width: 26px;
+        height: 29px;
+        background-image: url("../../images/icons/stack.svg#simple");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--useful {
+      grid-column: 1/5;
+      grid-row: 3/4;
+      &::after {
+        width: 25px;
+        height: 30px;
+        background-image: url("../../images/icons/stack.svg#useful");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--resultative {
+      grid-column: 1/5;
+      grid-row: 4/5;
+      &::after {
+        width: 26px;
+        height: 31px;
+        background-image: url("../../images/icons/stack.svg#resultative");
+        background-repeat: no-repeat;
+      }
+    }
   }
 
   &__text {
     font-size: 14px;
     line-height: 128.571%;
+    margin-bottom: 0;
   }
 
-  &__image {
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-color: #68B738;
+  @media (min-width: $tablet-width) {
+    &__title {
+      font-size: 60px;
+      line-height: 100%;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 150%;
+    }
+
+    &__list {
+      gap: 137px 83px;
+    }
+
+    &__item {
+      width: 246px;
+      height: 228px;
+      flex-direction: column;
+      align-items: start;
+      gap: 31px;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      &::before {
+        width: 80px;
+        height: 80px;
+      }
+
+      &::after {
+        top: 25px;
+        left: 27px;
+      }
+
+      &--natural {
+        background-image: url("../../images/icons/stack.svg#1");
+        background-size: 70px 228px;
+        grid-column: 1/3;
+        grid-row: 1/3;
+        background-position-x: 127px;
+      }
+
+      &--simple {
+        background-image: url("../../images/icons/stack.svg#2");
+        background-size: 112px 228px;
+        grid-column: 3/5;
+        grid-row: 1/3;
+        background-position-x: 122px;
+      }
+
+      &--useful {
+        background-image: url("../../images/icons/stack.svg#3");
+        background-size: 112px 228px;
+        grid-column: 1/3;
+        grid-row: 3/5;
+        background-position-x: 124px;
+      }
+
+      &--resultative {
+        background-image: url("../../images/icons/stack.svg#4");
+        background-size: 120px 228px;
+        grid-column: 3/5;
+        grid-row: 3/5;
+        background-position-x: 125px;
+      }
+    }
   }
 
-  &__image--natural {
-    background-image: url('../../images/icons/stack.svg#natural');
-    background-repeat: no-repeat;
-    background-size: 25px 28px;
-  }
+  @media (min-width: $desktop-width) {
+    &__list {
+      gap: 79px;
+    }
 
-  &__image--simple {
-    background-image: url('../../images/icons/stack.svg#simple');
-    background-repeat: no-repeat;
-    background-size: 26px 29px;
-  }
+    &__item {
+      &--natural {
+        grid-column: 1/2;
+        grid-row: 1/5;
+      }
 
-  &__image--useful {
-    background-image: url('../../images/icons/stack.svg#useful');
-    background-repeat: no-repeat;
-    background-size: 25px 30px;
-  }
+      &--simple {
+        grid-column: 2/3;
+        grid-row: 1/5;
+      }
 
-  &__image--resultative {
-    background-image: url('../../images/icons/stack.svg#resultative');
-    background-repeat: no-repeat;
-    background-size: 26px 31px;
+      &--useful {
+        grid-column: 3/4;
+        grid-row: 1/5;
+      }
+
+      &--resultative {
+        grid-column: 4/5;
+        grid-row: 1/5;
+      }
+    }
   }
 
 }

@@ -4,5 +4,9 @@
     line-height: $line-height;
     color: $color;
     text-transform: $text-transform;
+    font-weight: 400;
 }
 
+@mixin decor-line {
+  border: 1px solid #D9D9D9;
+}
