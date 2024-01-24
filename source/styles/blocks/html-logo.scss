@@ -12,12 +12,8 @@
     text-decoration: none;
   }
 
-  &__text {
-
-  }
-
-  &__icon {
-
+  @media (min-width: $tablet-width) {
+    width: 168px;
   }
 
 }

@@ -1,20 +1,86 @@
 .section-contacts {
+  &__container {
+    display: grid;
+  }
 
   &__wrapper {
+    grid-column: 1/3;
+    grid-row: 1/2;
     display: flex;
     justify-content: space-between;
     padding-top: 26px;
     padding-bottom: 26px;
+    background-color: #F2F2F2;
   }
 
   &__title {
     @include text-options("Oswald", 16px, 125%, #000, uppercase);
     flex-shrink: 0;
+    margin-bottom: 0;
   }
 
   &__text {
     font-size: 14px;
     line-height: 142.857%;
     flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  &__map {
+    width: 280px;
+    height: 362px;
+    background-color: tomato;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin: 0 auto;
+  }
+
+  @media (min-width:$tablet-width) {
+
+    &__wrapper {
+      padding: 61px 40px;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 130%;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 125%;
+    }
+
+    &__address {
+      display: block;
+      margin-top: 18px;
+    }
+
+    &__map {
+      width: 708px;
+      height: 400px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+
+    &__wrapper {
+      width: 566px;
+      height: 200px;
+      padding: 61px 80px;
+      margin-top: 95px;
+      background-color: #fff;
+      grid-column: 1/2;
+      grid-row: 1/2;
+      z-index: 2;
+    }
+
+    &__map {
+      width: 1220px;
+      height: 400px;
+      grid-column: 1/3;
+      grid-row: 1/2;
+      z-index: 1;
+    }
   }
 }

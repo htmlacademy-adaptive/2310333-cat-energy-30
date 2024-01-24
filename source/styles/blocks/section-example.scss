@@ -1,37 +1,44 @@
 .section-example {
-
   background-color: #EAEAEA;
 
   &__container {
+    display: grid;
     padding-top: 25px;
+    display: grid
   }
 
   &__title {
     @include text-options("Oswald", 36px, 111.111%, #000, none);
+    grid-column: 1/3;
+    grid-row: 1/2;
     margin-bottom: 40px;
   }
 
   &__text-primary {
     @include text-options("Lato", 14px, 128.571%, #444, none);
+    grid-column: 1/3;
+    grid-row: 2/3;
     margin-bottom: 20px;
   }
 
   &__list {
     display: flex;
-    gap: 32px
+    gap: 32px;
+    grid-column: 1/3;
+    grid-row: 3/4;
+    margin-bottom: 34px;
   }
 
   &__item {
-    @include text-options("Oswald", 24px, 100%, #000, none);
+    @include text-options("Oswald", 24px, 100%, #000, uppercase);
     width: 124px;
     height: 56px;
     border: 1px solid #CDCDCD;
-    border-radius: 5px;
+    border-radius: 4px;
     padding-top: 15px;
     padding-bottom: 18px;
     text-align: center;
     position: relative;
-    margin-bottom: 20px;
     &::after {
       content: "";
       @include text-options("Lato", 12px, 100%, #444, lowercase);
@@ -41,8 +48,8 @@
       transform: translate(-50%, -35%);
       background-color: #EAEAEA;
       z-index: 2;
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 14px;
+      padding-right: 14px;
     }
 
     &--weight::after {
@@ -56,11 +63,163 @@
 
   &__text-secondary {
     @include text-options("Oswald", 14px, 142.857%, #000, uppercase);
-    text-align: center;
+    grid-column: 1/3;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: center;
   }
 
-  &__wrapper {
-    margin-bottom: 20px;
+  &__slider {
+    grid-column: 1/3;
+    grid-row: 5/6;
+    width: 280px;
+    height: 256px;
+    background-color: tomato;
   }
 
+  @media (min-width:$tablet-width) {
+    position: relative;
+    border-top: 1px solid #E6E6E6;
+    background-color: #fff;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 462px;
+      background-color: #EAEAEA;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    &__container {
+      padding-top: 45px;
+      padding-bottom: 101px;
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 100%;
+      margin-bottom: 60px;
+      grid-column: 1/2;
+    }
+
+    &__text-primary {
+      font-size: 16px;
+      line-height: 150%;
+      margin-bottom: 55px;
+    }
+
+    &__list {
+      gap: 42px;
+      grid-column: 1/2;
+      grid-row: 3/4;
+      margin-bottom: 104px;
+    }
+
+    &__item {
+      font-size: 30px;
+      line-height: 123.333%;
+      width: 162px;
+      height: 72px;
+      border: 1px solid #CDCDCD;
+      border-radius: 4px;
+      padding-bottom: 20px;
+      &::after {
+        font-size: 14px;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+
+      &--weight::after {
+        width: 112px;
+      }
+
+      &--days::after {
+        width: 142px;
+      }
+    }
+
+    &__text-secondary {
+      width: 174px;
+      height: 50px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-size: 20px;
+      line-height: 100%;
+      grid-column: 2/3;
+      grid-row: 3/4;
+      margin-left: auto;
+      margin-top: 11px;
+      margin-bottom: 0;
+    }
+
+    &__slider {
+      grid-column: 1/3;
+      grid-row: 4/5;
+      width: 560px;
+      height: 512px;
+      margin: 0 auto;
+      z-index: 2;
+    }
+  }
+
+  @media (min-width:$desktop-width) {
+    border-top: none;
+    &__container {
+      padding-top: 0;
+      padding-bottom: 75px;
+    }
+
+    &__title {
+      margin-bottom: 146px;
+      z-index: 2;
+    }
+
+    &__text-primary {
+      width: 424px;
+      grid-column: 1/2;
+      grid-row: 2/3;
+      margin-bottom: 68px;
+      z-index: 2;
+    }
+
+    &__list {
+      margin-bottom: 55px;
+      z-index: 2;
+    }
+
+
+    &__item::after {
+      background-color: #EAEAEA;
+    }
+
+    &__text-secondary {
+      width: 328px;
+      height: 100%;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      font-size: 20px;
+      line-height: 100%;
+      grid-column: 1/2;
+      grid-row: 4/5;
+      margin-left: 0;
+      margin-right: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      z-index: 2;
+    }
+
+    &__slider {
+      grid-column: 2/3;
+      grid-row: 1/5;
+      width: 560px;
+      height: 512px;
+      margin-top: 0;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
 }

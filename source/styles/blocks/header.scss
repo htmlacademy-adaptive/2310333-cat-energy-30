@@ -27,14 +27,14 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 768px;
-    padding: 25px 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     &__cat-logo-wrapper {
       gap: 13px;
     }
   }
   @media (min-width: $desktop-width) {
-    width: 1440px;
-    padding: 55px 110px 29px 110px;
+    padding-top: 55px;
+    padding-bottom: 29px;
   }
 }

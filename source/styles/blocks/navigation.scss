@@ -1,10 +1,15 @@
 .navigation {
   display: flex;
   align-items: center;
-  @include text-options("Oswald", 20px, 100%, #000, uppercase);
+  z-index: 3;
 
   &__list {
+    @include text-options("Oswald", 20px, 100%, #000, uppercase);
     display: none;
+    flex-basis: 198px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__item {
@@ -13,29 +18,31 @@
 
   /*&__toggle:hover .navigation__list {
     display: flex;
-    flex-basis: 198px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+
   }*/
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    flex-basis: 436px;
-    font-size: 18px;
-    line-height: 133.333%;
+    width: 436px;
     &__list {
       display: flex;
+      flex-direction: row;
+      flex-basis: 436px;
+      font-size: 18px;
+      line-height: 133.333%;
       justify-content: space-between;
       flex-wrap: wrap;
     }
   }
 
   @media (min-width: $desktop-width) {
-    flex-basis: 475px;
-    font-size: 20px;
-    line-height: 100%;
-    color: #fff;
-    background-color: $primary-button-color;
+    width: 475px;
+    &__list {
+      flex-basis: 475px;
+      font-size: 20px;
+      line-height: 100%;
+    }
+    &__list--index {
+      color: #fff;
+    }
   }
 }

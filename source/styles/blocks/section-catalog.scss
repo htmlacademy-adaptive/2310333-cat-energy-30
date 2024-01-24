@@ -1,7 +1,75 @@
 .section-catalog {
+  border-top: 1px solid $primary-decor-color;
+  padding-top: 27px;
+
+  &__container {
+    margin-bottom: 25px;
+  }
 
   &__title {
     @include text-options("Oswald", 36px, 100%, #000, none);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    flex-wrap: wrap;
+    flex-shrink: 0;
+
+    /*
+
+    Ниже представлен кусок кода, который отвечает за отображение декоративных полосок, но у них проблема с центрированием...
+
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 768px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      background-color: $primary-decor-color;
+
+    }*/
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+
+    &__container {
+      margin-bottom: 70px;
+    }
+
+    &__title {
+      font-size: 60px;
+      margin-bottom: 84px;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 74px;
+
+    &__container {
+      margin-bottom: 76px;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 80px;
+    }
   }
 
 }
