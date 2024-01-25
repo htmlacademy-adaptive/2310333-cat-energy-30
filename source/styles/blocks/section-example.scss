@@ -33,7 +33,7 @@
     @include text-options("Oswald", 24px, 100%, #000, uppercase);
     width: 124px;
     height: 56px;
-    border: 1px solid #CDCDCD;
+    border: 1px solid $secondary-decor-line-color;
     border-radius: 4px;
     padding-top: 15px;
     padding-bottom: 18px;

@@ -1,5 +1,4 @@
 .section-catalog {
-  border-top: 1px solid $primary-decor-color;
   padding-top: 27px;
 
   &__container {
@@ -18,11 +17,6 @@
   &__item {
     flex-wrap: wrap;
     flex-shrink: 0;
-
-    /*
-
-    Ниже представлен кусок кода, который отвечает за отображение декоративных полосок, но у них проблема с центрированием...
-
     position: relative;
     &::before {
       content: "";
@@ -32,9 +26,18 @@
       left: 50%;
       transform: translateX(-50%);
       height: 1px;
-      background-color: $primary-decor-color;
-
-    }*/
+      background-color: $primary-decor-line-color;
+    }
+    &:last-child::after {
+      content: "";
+      position: absolute;
+      width: 768px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      background-color: $primary-decor-line-color;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -54,6 +57,11 @@
       flex-direction: row;
       flex-wrap: wrap;
       gap: 60px;
+    }
+
+    &__item::before,
+    &__item:last-child::after {
+      display: none;
     }
   }
 

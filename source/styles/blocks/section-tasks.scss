@@ -18,7 +18,9 @@
   &__text {
     font-size: 14px;
     line-height: 128.571%;
-    margin-bottom: 23px;
+    margin-bottom: 15px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid $primary-decor-line-color;
   }
 
   &__wrapper {
@@ -60,15 +62,6 @@
       background-repeat: no-repeat;
       z-index: 2;
     }
-  }
-
-  &__decor-line {
-    display: block;
-    width: 240px;
-    height: 1px;
-    margin: 0 auto;
-    background-color: #D9D9D9;
-    margin-bottom: 15px;
   }
 
   &__link {
