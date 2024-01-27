@@ -36,20 +36,20 @@
         </a>
       </div>
       <nav class="header__navigation navigation">
-        <button class="navigation__toggle toggle toggle--open">
+        <button class="navigation__toggle navigation__toggle--open toggle toggle--open">
           <span class="visually-hidden">Открыть меню навигации.</span>
         </button>
-        <button class="navigation__toggle toggle toggle--close">
+        <button class="navigation__toggle navigation__toggle--close toggle toggle--close">
           <span class="visually-hidden">Закрыть меню навигации.</span>
         </button>
-        <ul class="navigation__list">
-          <li class="navigation__item">
+        <ul class="navigation__list navigation__list--mobile">
+          <li class="navigation__item navigation__item--mobile">
             <a class="navigation__link" href="index.html">Главная</a>
           </li>
-          <li class="navigation__item">
+          <li class="navigation__item navigation__item--mobile">
             <a class="navigation__link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="navigation__item">
+          <li class="navigation__item navigation__item--mobile">
             <a class="navigation__link navigation__link--current" href="form.html">Подбор программы</a>
           </li>
         </ul>
@@ -70,11 +70,11 @@
                 <input class="programm-form__input programm-form__input--text" type="text" value="Барсик">
               </label>
               <label class="programm-form__label programm-form__label--cat" for="">
-                <span class="programm-form__text programm-form__text--cat">Вес(кг):*</span>
+                <span class="programm-form__text programm-form__text--cat">Вес (кг):*</span>
                 <input class="programm-form__input programm-form__input--text" type="text" value="7">
               </label>
               <label class="programm-form__label programm-form__label--cat" for="">
-                <span class="programm-form__text programm-form__text--cat">Возраст(лет):</span>
+                <span class="programm-form__text programm-form__text--cat">Возраст (лет):</span>
                 <input class="programm-form__input programm-form__input--text" type="text" value="7">
               </label>
             </div>
@@ -102,12 +102,12 @@
             <label class="programm-form__label programm-form__label--owner programm-form__label--owner-email">
               <span class="programm-form__text programm-form__text--owner">E-mail:*</span>
               <input class="programm-form__input programm-form__input--text programm-form__input--email-icon"
-                type="text">
+                type="text" value="кuklachev@gmail.com">
             </label>
             <label class="programm-form__label programm-form__label--owner programm-form__label--owner-phone">
               <span class="programm-form__text programm-form__text--owner">Телефон:*</span>
               <input class="programm-form__input programm-form__input--text programm-form__input--phone-icon"
-                type="text">
+                type="text" value="8 (960) 900-60-90">
             </label>
           </fieldset>
           <fieldset class="programm-form__comment">
@@ -145,7 +145,7 @@
           </fieldset>
           <fieldset class="programm-form__submit">
             <input class="programm-form__button button button--form" type="submit" value="Отправить заявку">
-            <p class="programm-form__text-secondary">* - Обязательные поля</p>
+            <p class="programm-form__text-secondary">* – Обязательные поля</p>
           </fieldset>
         </form>
     </section>
@@ -169,7 +169,7 @@
   <footer class="footer">
     <div class="footer__container container">
       <a class="footer__cat-logo" href="#">
-        <img class="footer__cat-logo-image" src="images/cat-logo-text-footer.svg" width="128px" height="24px"
+        <img class="footer__cat-logo-image" src="images/cat-logo-text-footer.svg" width="128" height="24"
           alt="Cat Energy">
       </a>
       <div class="footer__wrapper">

@@ -36,20 +36,20 @@
         </a>
       </div>
       <nav class="header__navigation navigation">
-        <button class="navigation__toggle toggle toggle--open">
+        <button class="navigation__toggle navigation__toggle--open toggle toggle--open">
           <span class="visually-hidden">Открыть меню навигации.</span>
         </button>
-        <button class="navigation__toggle toggle toggle--close">
+        <button class="navigation__toggle navigation__toggle--close toggle toggle--close">
           <span class="visually-hidden">Закрыть меню навигации.</span>
         </button>
-        <ul class="navigation__list">
-          <li class="navigation__item">
+        <ul class="navigation__list navigation__list--mobile">
+          <li class="navigation__item navigation__item--mobile">
             <a class="navigation__link" href="index.html">Главная</a>
           </li>
-          <li class="navigation__item">
+          <li class="navigation__item navigation__item--mobile">
             <a class="navigation__link navigation__link--current" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="navigation__item">
+          <li class="navigation__item navigation__item--mobile">
             <a class="navigation__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
@@ -65,9 +65,15 @@
           <li class="section-catalog__item">
             <article class="section-catalog__product-card product-card">
               <picture class="product-card__picture">
+                <source type="image/webp" media="(min-width:768px)"
+                  srcset="images/pro-small-chicken-tablet@1x.webp 1x, images/pro-small-chicken-tablet@2x.webp 2x"
+                  width="161" height="171">
                 <source type="image/png" media="(min-width:768px)"
                   srcset="images/pro-small-chicken-tablet@1x.png 1x, images/pro-small-chicken-tablet@2x.png 2x"
                   width="161" height="171">
+                <source type="image/webp"
+                  srcset="images/pro-small-chicken-mobile@1x.webp 1x, images/pro-small-chicken-mobile@2x.webp 2x"
+                  width="68" height="86">
                 <img class="product-card__image" src="images/pro-small-chicken-mobile@1x.png"
                   srcset="images/pro-small-chicken-mobile@2x.png 2x" width="68" height="86"
                   alt="Маленькая упаковка кошачьего питания для набора массы со вкусом курицы.">
@@ -100,12 +106,21 @@
           <li class="section-catalog__item">
             <article class="section-catalog__product-card product-card">
               <picture class="product-card__picture">
+                <source type="image/webp" media="(min-width:1440px)"
+                  srcset="images/pro-big-chicken-desktop@1x.webp 1x, images/pro-big-chicken-desktop@2x.webp 2x"
+                  width="172" height="196">
                 <source type="image/png" media="(min-width:1440px)"
                   srcset="images/pro-big-chicken-desktop@1x.png 1x, images/pro-big-chicken-desktop@2x.png 2x"
                   width="172" height="196">
+                <source type="image/webp" media="(min-width:768px)"
+                  srcset="images/pro-big-chicken-tablet@1x.webp 1x, images/pro-big-chicken-tablet@2x.webp 2x"
+                  width="168" height="200">
                 <source type="image/png" media="(min-width:768px)"
                   srcset="images/pro-big-chicken-tablet@1x.png 1x, images/pro-big-chicken-tablet@2x.png 2x" width="168"
                   height="200">
+                <source type="image/webp"
+                  srcset="images/pro-big-chicken-mobile@1x.webp 1x, images/pro-big-chicken-mobile@2x.webp 2x" width="84"
+                  height="100">
                 <img class="product-card__image" src="images/pro-big-chicken-mobile@1x.png"
                   srcset="images/pro-big-chicken-mobile@2x.png 2x" width="84" height="100"
                   alt="Большая упаковка кошачьего питания для набора массы со вкусом курицы.">
@@ -138,9 +153,15 @@
           <li class="section-catalog__item">
             <article class="section-catalog__product-card product-card">
               <picture class="product-card__picture">
+                <source type="image/webp" media="(min-width:768px)"
+                  srcset="images/pro-small-fish-tablet@1x.webp 1x, images/pro-small-fish-tablet@2x.webp 2x" width="161"
+                  height="171">
                 <source type="image/png" media="(min-width:768px)"
                   srcset="images/pro-small-fish-tablet@1x.png 1x, images/pro-small-fish-tablet@2x.png 2x" width="161"
                   height="171">
+                <source type="image/webp"
+                  srcset="images/pro-small-fish-mobile@1x.webp 1x, images/pro-small-fish-mobile@2x.webp 2x" width="68"
+                  height="86">
                 <img class="product-card__image" src="images/pro-small-fish-mobile@1x.png"
                   srcset="images/pro-small-fish-mobile@2x.png 2x" width="68" height="86"
                   alt="Маленькая упаковка кошачьего питания для набора массы со вкусом рыбы.">
@@ -173,12 +194,21 @@
           <li class="section-catalog__item">
             <article class="section-catalog__product-card product-card">
               <picture class="product-card__picture">
+                <source type="image/webp" media="(min-width:1440px)"
+                  srcset="images/pro-big-fish-desktop@1x.webp 1x, images/pro-big-fish-desktop@2x.webp 2x" width="172"
+                  height="196">
                 <source type="image/png" media="(min-width:1440px)"
                   srcset="images/pro-big-fish-desktop@1x.png 1x, images/pro-big-fish-desktop@2x.png 2x" width="172"
                   height="196">
+                <source type="image/webp" media="(min-width:768px)"
+                  srcset="images/pro-big-fish-tablet@1x.webp 1x, images/pro-big-fish-tablet@2x.webp 2x" width="168"
+                  height="200">
                 <source type="image/png" media="(min-width:768px)"
                   srcset="images/pro-big-fish-tablet@1x.png 1x, images/pro-big-fish-tablet@2x.png 2x" width="168"
                   height="200">
+                <source type="image/webp"
+                  srcset="images/pro-big-fish-mobile@1x.webp 1x, images/pro-big-fish-mobile@2x.webp 2x" width="84"
+                  height="100">
                 <img class="product-card__image" src="images/pro-big-fish-mobile@1x.png"
                   srcset="images/pro-big-fish-mobile@2x.png 2x" width="84" height="100"
                   alt="Большая упаковка кошачьего питания для набора массы со вкусом рыбы.">
@@ -211,9 +241,15 @@
           <li class="section-catalog__item">
             <article class="section-catalog__product-card product-card">
               <picture class="product-card__picture">
+                <source type="image/webp" media="(min-width:768px)"
+                  srcset="images/slim-small-buckwheat-tablet@1x.webp 1x, images/slim-small-buckwheat-tablet@2x.webp 2x"
+                  width="161" height="171">
                 <source type="image/png" media="(min-width:768px)"
                   srcset="images/slim-small-buckwheat-tablet@1x.png 1x, images/slim-small-buckwheat-tablet@2x.png 2x"
                   width="161" height="171">
+                <source type="image/webp"
+                  srcset="images/slim-small-buckwheat-mobile@1x.webp 1x, images/slim-small-buckwheat-mobile@2x.webp 2x"
+                  width="68" height="86">
                 <img class="product-card__image" src="images/slim-small-buckwheat-mobile@1x.png"
                   srcset="images/slim-small-buckwheat-mobile@2x.png 2x" width="68" height="86"
                   alt="Маленькая упаковка кошачьего питания для похудения со вкусом гречи.">
@@ -246,12 +282,21 @@
           <li class="section-catalog__item">
             <article class="section-catalog__product-card product-card">
               <picture class="product-card__picture">
+                <source type="image/webp" media="(min-width:1440px)"
+                  srcset="images/slim-big-buckwheat-desktop@1x.webp 1x, images/slim-big-buckwheat-desktop@2x.webp 2x"
+                  width="172" height="196">
                 <source type="image/png" media="(min-width:1440px)"
                   srcset="images/slim-big-buckwheat-desktop@1x.png 1x, images/slim-big-buckwheat-desktop@2x.png 2x"
                   width="172" height="196">
+                <source type="image/webp" media="(min-width:768px)"
+                  srcset="images/slim-big-buckwheat-tablet@1x.webp 1x, images/slim-big-buckwheat-tablet@2x.webp 2x"
+                  width="168" height="200">
                 <source type="image/png" media="(min-width:768px)"
                   srcset="images/slim-big-buckwheat-tablet@1x.png 1x, images/slim-big-buckwheat-tablet@2x.png 2x"
                   width="168" height="200">
+                <source type="image/webp"
+                  srcset="images/slim-big-buckwheat-mobile@1x.webp 1x, images/slim-big-buckwheat-mobile@2x.webp 2x"
+                  width="84" height="100">
                 <img class="product-card__image" src="images/slim-big-buckwheat-mobile@1x.png"
                   srcset="images/slim-big-buckwheat-mobile@2x.png 2x" width="84" height="100"
                   alt="Большая упаковка кошачьего питания для похудения со вкусом гречи.">
@@ -284,9 +329,15 @@
           <li class="section-catalog__item">
             <article class="section-catalog__product-card product-card">
               <picture class="product-card__picture">
+                <source type="image/webp" media="(min-width:768px)"
+                  srcset="images/slim-small-rice-tablet@1x.webp 1x, images/slim-small-rice-tablet@2x.webp 2x"
+                  width="161" height="171">
                 <source type="image/png" media="(min-width:768px)"
                   srcset="images/slim-small-rice-tablet@1x.png 1x, images/slim-small-rice-tablet@2x.png 2x" width="161"
                   height="171">
+                <source type="image/webp"
+                  srcset="images/slim-small-rice-mobile@1x.webp 1x, images/slim-small-rice-mobile@2x.webp 2x" width="68"
+                  height="86">
                 <img class="product-card__image" src="images/slim-small-rice-mobile@1x.png"
                   srcset="images/slim-small-rice-mobile@2x.png 2x" width="68" height="86"
                   alt="Маленькая упаковка кошачьего питания для похудения со вкусом риса.">
@@ -391,34 +442,32 @@
   <footer class="footer">
     <div class="footer__container container">
       <a class="footer__cat-logo" href="#">
-        <img class="footer__cat-logo-image" src="images/cat-logo-text-footer.svg" width="128px" height="24px"
+        <img class="footer__cat-logo-image" src="images/cat-logo-text-footer.svg" width="128" height="24"
           alt="Cat Energy">
       </a>
-      <div class="footer__wrapper">
-        <ul class="footer__socials socials">
-          <li class="socials__item">
-            <a class="socials__link" href="#">
-              <span class="socials__icon socials__icon--vk">
-                <span class="visually-hidden">Мы в Вконтакте.</span>
-              </span>
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#">
-              <span class="socials__icon socials__icon--youtube">
-                <span class="visually-hidden">Мы на Ютьюб.</span>
-              </span>
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#">
-              <span class="socials__icon socials__icon--telegram">
-                <span class="visually-hidden">Мы в Телеграм.</span>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="footer__socials socials">
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <span class="socials__icon socials__icon--vk">
+              <span class="visually-hidden">Мы в Вконтакте.</span>
+            </span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <span class="socials__icon socials__icon--youtube">
+              <span class="visually-hidden">Мы на Ютьюб.</span>
+            </span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <span class="socials__icon socials__icon--telegram">
+              <span class="visually-hidden">Мы в Телеграм.</span>
+            </span>
+          </a>
+        </li>
+      </ul>
 
       <div class="footer__html-logo html-logo">
         <a class="html-logo__text-part" href="https://htmlacademy.ru/study">

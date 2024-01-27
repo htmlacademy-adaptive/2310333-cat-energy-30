@@ -2,7 +2,7 @@
   margin-bottom: 49px;
 
   &__container {
-
+    padding-right: 21px
   }
 
   &__title {
@@ -11,7 +11,8 @@
   }
 
   &__list {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
   }
 
@@ -36,48 +37,32 @@
       left: 17px;
     }
 
-    &--natural {
-      grid-column: 1/5;
-      grid-row: 1/2;
-      &::after {
-        width: 25px;
-        height: 28px;
-        background-image: url("../../images/icons/stack.svg#natural");
-        background-repeat: no-repeat;
-      }
+    &--natural::after {
+      width: 25px;
+      height: 28px;
+      background-image: url("../../images/icons/stack.svg#natural");
+      background-repeat: no-repeat;
     }
 
-    &--simple {
-      grid-column: 1/5;
-      grid-row: 2/3;
-      &::after {
-        width: 26px;
-        height: 29px;
-        background-image: url("../../images/icons/stack.svg#simple");
-        background-repeat: no-repeat;
-      }
+    &--simple::after {
+      width: 26px;
+      height: 29px;
+      background-image: url("../../images/icons/stack.svg#simple");
+      background-repeat: no-repeat;
     }
 
-    &--useful {
-      grid-column: 1/5;
-      grid-row: 3/4;
-      &::after {
-        width: 25px;
-        height: 30px;
-        background-image: url("../../images/icons/stack.svg#useful");
-        background-repeat: no-repeat;
-      }
+    &--useful::after {
+      width: 25px;
+      height: 30px;
+      background-image: url("../../images/icons/stack.svg#useful");
+      background-repeat: no-repeat;
     }
 
-    &--resultative {
-      grid-column: 1/5;
-      grid-row: 4/5;
-      &::after {
-        width: 26px;
-        height: 31px;
-        background-image: url("../../images/icons/stack.svg#resultative");
-        background-repeat: no-repeat;
-      }
+    &--resultative::after {
+      width: 26px;
+      height: 31px;
+      background-image: url("../../images/icons/stack.svg#resultative");
+      background-repeat: no-repeat;
     }
   }
 
@@ -87,10 +72,17 @@
     margin-bottom: 0;
   }
 
+  &__wrap {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
+
     &__title {
       font-size: 60px;
       line-height: 100%;
+      margin-bottom: 72px;
     }
 
     &__text {
@@ -98,13 +90,19 @@
       line-height: 150%;
     }
 
+    &__wrap {
+      display: block;
+    }
+
     &__list {
-      gap: 137px 83px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 88px 138px;
     }
 
     &__item {
       width: 246px;
-      height: 228px;
+      min-height: 228px;
       flex-direction: column;
       align-items: start;
       gap: 31px;
@@ -155,6 +153,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
     &__list {
       gap: 79px;
     }

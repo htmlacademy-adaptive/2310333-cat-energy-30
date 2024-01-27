@@ -5,14 +5,14 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 30px
+    gap: 20px
   }
 
   &__title {
     @include text-options("Oswald", 24px, 154.167%, #000, uppercase);
     margin-top: 0;
     margin-bottom: 29px;
-    margin-left: 90px;
+    margin-left: 70px;
   }
 
   &__text {
@@ -25,7 +25,7 @@
 
   &__wrapper {
     position: relative;
-    padding: 30px 20px 18px 20px;
+    padding: 30px 24px 18px 20px;
     background-color: #F2F2F2;
     &::before {
       content: "";
@@ -96,8 +96,12 @@
   @media (min-width:$tablet-width) {
     margin-bottom: 45px;
 
+    &__container {
+      gap: 30px;
+    }
+
     &__wrapper {
-      padding: 77px 52px 53px 52px;
+      padding: 77px 52px 58px 52px;
 
       &::before {
         width: 200px;
@@ -133,7 +137,9 @@
       font-size: 16px;
       line-height: 150%;
       color: #000;
-      margin-bottom: 48px;
+      padding-bottom: 0;
+      margin-bottom: 54px;
+      border: none;
     }
 
     &__decor-line {
@@ -155,7 +161,7 @@
 
     &__wrapper {
       width: 570px;
-      padding-bottom: 55px;
+      padding-bottom: 60px;
 
       &::before {
         width: 100px;
@@ -180,17 +186,17 @@
     }
 
     &__title {
-      margin-left: 214px;
+      margin-left: 162px;
       margin-bottom: 73px;
     }
 
     &__text {
       width: auto;
-      margin-bottom: 23px;
+      margin-bottom: 28px;
     }
 
     &__link {
-      width: 168px;
+      width: 165px;
     }
   }
 }

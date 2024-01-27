@@ -45,7 +45,7 @@
   }
 
   &__label--cat:not(:last-child) {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
 
   &__label--tasks:not(:last-child) {
@@ -105,11 +105,11 @@
   }
 
   &__title--owner {
-    margin-bottom: 35px;
+    margin-bottom: 34px;
   }
 
   &__label--owner:not(:last-child) {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
 
   &__text--owner {
@@ -166,7 +166,7 @@
   }
 
   &__label--extra:not(:last-child) {
-    margin-bottom: 13px;
+    margin-bottom: 12px;
   }
 
   &__text--extra {
@@ -217,13 +217,17 @@
       height: 2px;
       background-color: $primary-button-color;
       position: absolute;
-      top: 50%;
+      top: 52%;
       transform: translateY(-50%);
       right: calc(100% + 20px);
     }
     &::after {
       left: calc(100% + 20px);
     }
+  }
+
+  &__title--owner::after {
+    top: 32%;
   }
 
   @media (min-width: $tablet-width) {
@@ -233,7 +237,7 @@
     }
 
     &__about-cat {
-      margin-bottom: 65px;
+      margin-bottom: 62px;
     }
 
     &__wrapper {
@@ -257,7 +261,7 @@
     }
 
     &__label--cat:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     &__text--tasks {
@@ -279,11 +283,11 @@
     }
 
     &__about-owner {
-      margin-bottom: 65px;
+      margin-bottom: 64px;
     }
 
     &__title--owner {
-      margin-bottom: 76px;
+      margin-bottom: 75px;
     }
 
     &__wrap {
@@ -291,7 +295,7 @@
     }
 
     &__label--owner:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     &__label--owner-email::after,
@@ -311,12 +315,12 @@
       max-height: 175px;
     }
 
-    &__extra {
-      margin-bottom: 60px;
-    }
-
     &__title--extra {
       margin-bottom: 57px;
+    }
+
+    &__text--extra {
+      margin-left: 20px;
     }
 
     &__custom-checkbox {
@@ -333,9 +337,10 @@
     &__extra {
       width: 100%;
       display: flex;
-      column-gap: 60px;
+      column-gap: 64px;
       row-gap: 32px;
       flex-wrap: wrap;
+      margin-bottom: 52px;
     }
 
     &__label--extra:not(:last-child) {
@@ -371,6 +376,7 @@
     &__title--owner::before,
     &__title--comment::before,
     &__title--extra::before {
+      top: 65%;
       right: calc(100% + 40px);
     }
 
@@ -378,6 +384,7 @@
     &__title--comment::after,
     &__title--extra::after {
       left: calc(100% + 40px);
+      top: 65%;
     }
   }
 
@@ -446,6 +453,11 @@
       align-items: center;
       column-gap: 80px;
       flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    &__title--extra {
+      margin-bottom: 55px;
     }
 
     &__label--extra {
