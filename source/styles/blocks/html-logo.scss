@@ -5,11 +5,36 @@
   align-items: center;
   &__text-part {
     @include text-options("Lato", 16px, 125%, #444, none);
-    text-decoration: none;
+    transition-duration: $duration;
   }
 
   &__icon-part {
-    text-decoration: none;
+    display: block;
+    width: 27px;
+    height: 34px;
+    mask-image: url("../../images/html-logo-picture.svg");
+    -webkit-mask-image: url("../../images/html-logo-picture.svg");
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    background-color: #666;
+    transition-duration: $duration;
+  }
+
+  &:hover,
+  &:focus {
+    .html-logo__icon-part {
+      background-color: $primary-button-color;
+    }
+  }
+
+  &:active {
+    .html-logo__text-part {
+      opacity: 0.3;
+    }
+    .html-logo__icon-part {
+      background-color: $primary-button-color;
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: $tablet-width) {

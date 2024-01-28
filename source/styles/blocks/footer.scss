@@ -13,6 +13,16 @@
 
   &__cat-logo {
     margin-bottom: 18px;
+    transition-duration: $duration;
+  }
+
+  &__cat-logo:hover,
+  &__cat-logo:focus {
+    opacity: 0.8;
+  }
+
+  &__cat-logo:active {
+    opacity: 0.6;
   }
 
   &__socials {
@@ -49,7 +59,6 @@
 
     &__socials {
       margin: 0;
-      padding-left: 10px;
       &::before,
       &::after {
         display: none;

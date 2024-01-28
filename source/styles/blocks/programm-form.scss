@@ -69,6 +69,16 @@
     border: 1px solid #E7E7E7;
     border-radius: none;
     padding: 14px 14px 13px 15px;
+    transition-duration: $duration;
+  }
+
+  &__input--text:hover {
+    border-color: $secondary-decor-line-color;
+  }
+
+  &__input--text:focus {
+    box-shadow: 0 0 0 2px #444;
+    outline: none;
   }
 
   &__custom-radio {
@@ -77,6 +87,13 @@
     height: 30px;
     border: 1px solid $secondary-decor-line-color;
     border-radius: 50%;
+    transition-duration: $duration;
+    cursor: pointer;
+  }
+
+  &__custom-radio:hover,
+  &__custom-radio:focus {
+    border-color: #BABABA;
   }
 
   &__input--radio,
@@ -85,6 +102,10 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+  }
+
+  &__input--radio:disabled ~ &__radio {
+    opacity: 0.3;
   }
 
   &__input--radio:checked + &__custom-radio::after {
@@ -125,22 +146,36 @@
       top: 50%;
       transform: translateY(-50%);
       right: 14px;
-      background-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      background-color: #000;
     }
   }
 
   &__label--owner-email::after {
     width: 17px;
     height: 13px;
-    background-image: url("../../images/icons/stack.svg#email");
-    background-size: 17px auto;
+    mask-image: url("../../images/icons/stack.svg#email");
+    -webkit-mask-image: url("../../images/icons/stack.svg#email");
+    mask-size: 17px auto;
+    -webkit-mask-size: 17px auto;
   }
 
   &__label--owner-phone::after {
     width: 15px;
     height: 15px;
-    background-image: url("../../images/icons/stack.svg#phone");
-    background-size: 15px auto;
+    mask-image: url("../../images/icons/stack.svg#phone");
+    -webkit-mask-image: url("../../images/icons/stack.svg#phone");
+    mask-size: 15px auto;
+    -webkit-mask-size: 15px auto;
+  }
+
+  //Не работает код ниже
+
+  &__label--owner:focus {
+    &__label--owner-email::after {
+      background-color: $primary-button-color;
+    }
   }
 
 //FIELDSET - comment
@@ -178,6 +213,17 @@
     width: 30px;
     height: 30px;
     border: 1px solid $secondary-decor-line-color;
+    cursor: pointer;
+    transition-duration: $duration;
+  }
+
+  &__custom-checkbox:hover,
+  &__custom-checkbox:focus {
+    border-color: #BABABA;
+  }
+
+  &__input--checkbox:disabled ~ &__checkbox {
+    opacity: 0.3;
   }
 
   &__input--checkbox:checked + &__custom-checkbox::after {

@@ -15,7 +15,7 @@
 <body class="body">
   <header class="header header--form">
     <div class="header__container container">
-      <div class="header__cat-logo-wrapper">
+      <article class="header__cat-logo-wrapper">
         <a class="header__cat-logo-icon" href="index.html" aria-current="page">
           <picture>
             <source type="image/svg+xml" media="(min-width:1440px)" srcset="images/cat-logo-picture-desktop.svg"
@@ -34,7 +34,7 @@
             <img src="images/cat-logo-text-footer.svg" width="101" height="18" alt="Cat Energy.">
           </picture>
         </a>
-      </div>
+      </article>
       <nav class="header__navigation navigation">
         <button class="navigation__toggle navigation__toggle--open toggle toggle--open">
           <span class="visually-hidden">Открыть меню навигации.</span>
@@ -50,7 +50,7 @@
             <a class="navigation__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="navigation__item navigation__item--mobile">
-            <a class="navigation__link navigation__link--current" href="form.html">Подбор программы</a>
+            <a class="navigation__link navigation__link-current" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -64,7 +64,7 @@
         <p class="section-programm__text">Заполните анкету, и мы подберём<br> программу питания для вашего кота</p>
         <form class="section-programm__form programm-form" method="post" action="https://echo.htmlacademy.ru/">
           <fieldset class="programm-form__about-cat">
-            <div class="programm-form__wrapper programm-form__wrapper--cat">
+            <article class="programm-form__wrapper programm-form__wrapper--cat">
               <label class="programm-form__label programm-form__label--cat" for="">
                 <span class="programm-form__text programm-form__text--cat">Имя:*</span>
                 <input class="programm-form__input programm-form__input--text" type="text" value="Барсик">
@@ -77,37 +77,36 @@
                 <span class="programm-form__text programm-form__text--cat">Возраст (лет):</span>
                 <input class="programm-form__input programm-form__input--text" type="text" value="7">
               </label>
-            </div>
-            <div class="programm-form__wrapper programm-form__wrapper--tasks">
+            </article>
+            <article class="programm-form__wrapper programm-form__wrapper--tasks">
               <label class="programm-form__label programm-form__label--tasks">
                 <input class="programm-form__input programm-form__input--radio" type="radio" name="radio-task" checked>
-                <span class="programm-form__custom-radio"></span>
-                <span class="programm-form__text programm-form__text--tasks">Похудение</span>
+                <span class="programm-form__custom-radio programm-form__radio"></span>
+                <span class="programm-form__text programm-form__text--tasks programm-form__radio">Похудение</span>
               </label>
               <label class="programm-form__label programm-form__label--tasks">
                 <input class="programm-form__input programm-form__input--radio" type="radio" name="radio-task">
-                <span class="programm-form__custom-radio"></span>
-                <span class="programm-form__text programm-form__text--tasks">Набор массы</span>
+                <span class="programm-form__custom-radio programm-form__radio"></span>
+                <span class="programm-form__text programm-form__text--tasks programm-form__radio">Набор массы</span>
               </label>
               <label class="programm-form__label programm-form__label--tasks">
-                <input class="programm-form__input programm-form__input--radio" type="radio" name="radio-task">
-                <span class="programm-form__custom-radio"></span>
-                <span class="programm-form__text programm-form__text--tasks">Не знаю (нужен ваш совет)</span>
+                <input class="programm-form__input programm-form__input--radio" type="radio" name="radio-task" disabled>
+                <span class="programm-form__custom-radio programm-form__radio"></span>
+                <span class="programm-form__text programm-form__text--tasks programm-form__radio">Не знаю (нужен ваш
+                  совет)</span>
               </label>
-            </div>
+            </article>
           </fieldset>
           <fieldset class="programm-form__about-owner">
             <legend class="programm-form__title programm-form__title--owner">Контактные данные<br
                 class="programm-form__wrap"> (владельца кота)</legend>
             <label class="programm-form__label programm-form__label--owner programm-form__label--owner-email">
               <span class="programm-form__text programm-form__text--owner">E-mail:*</span>
-              <input class="programm-form__input programm-form__input--text programm-form__input--email-icon"
-                type="text" value="кuklachev@gmail.com">
+              <input class="programm-form__input programm-form__input--text" type="text" value="кuklachev@gmail.com">
             </label>
             <label class="programm-form__label programm-form__label--owner programm-form__label--owner-phone">
               <span class="programm-form__text programm-form__text--owner">Телефон:*</span>
-              <input class="programm-form__input programm-form__input--text programm-form__input--phone-icon"
-                type="text" value="8 (960) 900-60-90">
+              <input class="programm-form__input programm-form__input--text" type="text" value="8 (960) 900-60-90">
             </label>
           </fieldset>
           <fieldset class="programm-form__comment">
@@ -122,25 +121,26 @@
             <label for="nosugar" class="programm-form__label programm-form__label--extra">
               <input id="nosugar" class="programm-form__input programm-form__input--checkbox" type="checkbox"
                 name="no-sugar" checked>
-              <span class="programm-form__custom-checkbox"></span>
-              <span class="programm-form__text programm-form__text--extra">Сахарозаменитель</span>
+              <span class="programm-form__custom-checkbox programm-form__checkbox"></span>
+              <span
+                class="programm-form__text programm-form__text--extra programm-form__checkbox">Сахарозаменитель</span>
             </label>
             <label for="water" class="programm-form__label programm-form__label--extra">
               <input id="water" class="programm-form__input programm-form__input--checkbox" type="checkbox"
                 name="water">
-              <span class="programm-form__custom-checkbox"></span>
-              <span class="programm-form__text programm-form__text--extra">Питьевая вода</span>
+              <span class="programm-form__custom-checkbox programm-form__checkbox"></span>
+              <span class="programm-form__text programm-form__text--extra programm-form__checkbox">Питьевая вода</span>
             </label>
             <label for="milk" class="programm-form__label programm-form__label--extra">
               <input id="milk" class="programm-form__input programm-form__input--checkbox" type="checkbox" name="milk">
-              <span class="programm-form__custom-checkbox"></span>
-              <span class="programm-form__text programm-form__text--extra">Молоко</span>
+              <span class="programm-form__custom-checkbox programm-form__checkbox"></span>
+              <span class="programm-form__text programm-form__text--extra programm-form__checkbox">Молоко</span>
             </label>
             <label for="vitamins" class="programm-form__label programm-form__label--extra">
               <input id="vitamins" class="programm-form__input programm-form__input--checkbox" type="checkbox"
-                name="vitamins">
-              <span class="programm-form__custom-checkbox"></span>
-              <span class="programm-form__text programm-form__text--extra">Витамины</span>
+                name="vitamins" disabled>
+              <span class="programm-form__custom-checkbox programm-form__checkbox"></span>
+              <span class="programm-form__text programm-form__text--extra programm-form__checkbox">Витамины</span>
             </label>
           </fieldset>
           <fieldset class="programm-form__submit">
@@ -172,45 +172,39 @@
         <img class="footer__cat-logo-image" src="images/cat-logo-text-footer.svg" width="128" height="24"
           alt="Cat Energy">
       </a>
-      <div class="footer__wrapper">
-        <ul class="footer__socials socials">
-          <li class="socials__item">
-            <a class="socials__link" href="#">
-              <span class="socials__icon socials__icon--vk">
-                <span class="visually-hidden">Мы в Вконтакте.</span>
-              </span>
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#">
-              <span class="socials__icon socials__icon--youtube">
-                <span class="visually-hidden">Мы на Ютьюб.</span>
-              </span>
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#">
-              <span class="socials__icon socials__icon--telegram">
-                <span class="visually-hidden">Мы в Телеграм.</span>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="footer__socials socials">
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <span class="socials__icon socials__icon--vk">
+              <span class="visually-hidden">Мы в Вконтакте.</span>
+            </span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <span class="socials__icon socials__icon--youtube">
+              <span class="visually-hidden">Мы на Ютьюб.</span>
+            </span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <span class="socials__icon socials__icon--telegram">
+              <span class="visually-hidden">Мы в Телеграм.</span>
+            </span>
+          </a>
+        </li>
+      </ul>
 
-      <div class="footer__html-logo html-logo">
+      <article class="footer__html-logo html-logo">
         <a class="html-logo__text-part" href="https://htmlacademy.ru/study">
-          <span class="html-logo__text">HTML Academy</span>
+          HTML Academy
         </a>
         <a class="html-logo__icon-part" href="https://htmlacademy.ru/study">
-          <svg class="html-logo__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 35" width="27"
-            height="34"
-            aria-label="Логотип компании HTML-Academy, стилизованный под головной убор выпускника магистратуры.">
-            <path fill="#666"
-              d="m13.64.52-.14-.02-13.5 1.4v24.61l13.5 7.99 13.5-7.99v-24.6l-13.36-1.41Zm11.6 25-11.74 6.94-11.73-6.94v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83v-5.22l3.62-2.15v10.26Zm0-11.57-3.24 1.88-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19-11.61-6.87 11.63-6.96 11.8 6.83Zm0-1.22-11.81-6.93-11.66 6.92v-9.23l11.73-1.23 11.73 1.24v9.24Z" />
-          </svg>
+          <span class="visually-hidden">Логотип компании HTML-Academy, стилизованный под головной убор выпускника
+            магистратуры.</span>
         </a>
-      </div>
+      </article>
     </div>
   </footer>
 </body>

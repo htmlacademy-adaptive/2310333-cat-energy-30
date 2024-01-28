@@ -1,9 +1,23 @@
 .section-contacts {
+  position: relative;
   display: grid;
   &--catalog,
   &--form {
     background-color: $primary-decor-background-color;
   }
+
+  &__wrapper {
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    column-gap: 16px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
   &__map {
     margin: 0 auto;
     width: 100vw;
@@ -12,18 +26,6 @@
     display: block;
     grid-column: 1/2;
     grid-row: 2/3;
-  }
-
-  &__container {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-
-  &__wrapper {
-    display: flex;
-    column-gap: 16px;
-    padding-top: 26px;
-    padding-bottom: 26px;
   }
 
   &__container--catalog,
@@ -52,9 +54,10 @@
     }
 
     &__wrapper {
+      width: 768px;
       gap: 0;
       justify-content: space-between;
-      padding: 61px 40px;
+      padding: 61px 70px;
     }
 
     &__title {
@@ -78,17 +81,22 @@
 
     &__container {
       background: none;
-      grid-column: 1/2;
-      grid-row: 2/3;
-      z-index: 2;
     }
 
     &__wrapper {
+      position: absolute;
+      top: 50%;
+      transform: translate(calc(-100% - 44px), -53%);
+      left: 50%;
       width: 566px;
-      height: 200px;
-      margin-top: 95px;
+      height: 199px;
       padding: 61px 80px;
       background-color: #fff;
+      z-index: 2;
+    }
+
+    &__map {
+      grid-row: 1/2;
     }
 
     &__text {

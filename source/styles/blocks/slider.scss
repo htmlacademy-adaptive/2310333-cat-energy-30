@@ -1,0 +1,107 @@
+.slider {
+  width: 280px;
+  min-height: 256px;
+  display: grid;
+  position: relative;
+
+  &__picture {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: relative;
+  }
+
+  &__picture--slim {
+    grid-column: 2/3;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+  }
+
+  &__image--slim {
+    object-position: right center;
+  }
+
+  &__button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #666;
+    padding: 0;
+    background-color: #fff;
+    cursor: pointer;
+    transition-duration: $duration;
+    &::before {
+      content: "";
+      position: absolute;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 18px;
+      mask-image: url("../../images/icons/stack.svg#slider-button");
+      -webkit-mask-image: url("../../images/icons/stack.svg#slider-button");
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-size: 24px 18px;
+      -webkit-mask-size: 24px 18px;
+      background-color: #666;
+      transition-duration: $duration;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      transform: translate(-50%, -50%);
+      width: 4px;
+      height: 256px;
+      border-radius: 2px;
+      background-color: #666;
+      z-index: -1;
+      transition-duration: $duration;
+    }
+  }
+
+  &__button:hover,
+  &__button:focus {
+    border-color: $primary-button-color;
+    &::before {
+      background-color: $primary-button-color;
+    }
+    &::after {
+      background-color: $primary-button-color;
+    }
+  }
+
+  &__button:active {
+    border-color: #9ECC82;
+    &::before {
+      background-color: #9ECC82;
+    }
+    &::after {
+      background-color: #9ECC82
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+    margin: 0 auto;
+
+    &__button::after {
+      height: 512px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+    height: 512px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}

@@ -64,35 +64,6 @@
     }
   }
 
-  &__link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 134px;
-    padding: 4px 0;
-    margin: 0;
-    text-align: left;
-    &::after {
-      content: "";
-      display: block;
-      width: 32px;
-      height: 10px;
-      background-image: url("../../images/icons/stack.svg#arrow");
-      background-repeat: no-repeat;
-    }
-  }
-
-
-  &__link-icon {
-    width: 32px;
-    height: 10px;
-    mask-image: url("../../images/icons/stack.svg#arrow");
-    -webkit-mask-image: url("../../images/icons/stack.svg#arrow.svg");
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-    background-color: #000;
-  }
-
   @media (min-width:$tablet-width) {
     margin-bottom: 45px;
 
