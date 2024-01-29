@@ -30,15 +30,27 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid #666;
+    width: 4px;
+    height: 256px;
+    border-radius: 2px;
+    background-color: #666;
+    transition-duration: $duration;
     padding: 0;
-    background-color: #fff;
     cursor: pointer;
     transition-duration: $duration;
     &::before {
+      content: "";
+      position: absolute;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #666;
+      transition-duration: $duration;
+      background-color: #fff;
+      transition-duration: $duration;
+    }
+    &::after {
       content: "";
       position: absolute;
       transform: translate(-50%, -50%);
@@ -53,24 +65,13 @@
       background-color: #666;
       transition-duration: $duration;
     }
-    &::after {
-      content: "";
-      position: absolute;
-      transform: translate(-50%, -50%);
-      width: 4px;
-      height: 256px;
-      border-radius: 2px;
-      background-color: #666;
-      z-index: -1;
-      transition-duration: $duration;
-    }
   }
 
   &__button:hover,
   &__button:focus {
-    border-color: $primary-button-color;
+    background-color: $primary-button-color;
     &::before {
-      background-color: $primary-button-color;
+      border-color: $primary-button-color;
     }
     &::after {
       background-color: $primary-button-color;
@@ -78,9 +79,9 @@
   }
 
   &__button:active {
-    border-color: #9ECC82;
+    background-color: #9ECC82;
     &::before {
-      background-color: #9ECC82;
+      border-color: #9ECC82;
     }
     &::after {
       background-color: #9ECC82
@@ -91,8 +92,7 @@
     width: 560px;
     height: 512px;
     margin: 0 auto;
-
-    &__button::after {
+    &__button {
       height: 512px;
     }
   }

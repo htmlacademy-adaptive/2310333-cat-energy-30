@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cat Energy - Подбор программы</title>
-  <link rel="icon" href="source/favicon.ico">
-  <link rel="icon" href="source/favicons/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="source/favicons/favicon-apple.png">
-  <link rel="manifest" href="source/manifest.webmanifest">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/favicon-apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -65,17 +65,19 @@
         <form class="section-programm__form programm-form" method="post" action="https://echo.htmlacademy.ru/">
           <fieldset class="programm-form__about-cat">
             <article class="programm-form__wrapper programm-form__wrapper--cat">
-              <label class="programm-form__label programm-form__label--cat" for="">
+              <label class="programm-form__label programm-form__label--cat" for="cat-name">
                 <span class="programm-form__text programm-form__text--cat">Имя:*</span>
-                <input class="programm-form__input programm-form__input--text" type="text" value="Барсик">
+                <input id="cat-name" class="programm-form__input programm-form__input-text" type="text" value="Барсик"
+                  required>
               </label>
-              <label class="programm-form__label programm-form__label--cat" for="">
+              <label class="programm-form__label programm-form__label--cat" for="cat-weight">
                 <span class="programm-form__text programm-form__text--cat">Вес (кг):*</span>
-                <input class="programm-form__input programm-form__input--text" type="text" value="7">
+                <input id="cat-weight" class="programm-form__input programm-form__input-text" type="text" value="7"
+                  required>
               </label>
-              <label class="programm-form__label programm-form__label--cat" for="">
+              <label class="programm-form__label programm-form__label--cat" for="cat-age">
                 <span class="programm-form__text programm-form__text--cat">Возраст (лет):</span>
-                <input class="programm-form__input programm-form__input--text" type="text" value="7">
+                <input id="cat-age" class="programm-form__input programm-form__input-text" type="text" value="7">
               </label>
             </article>
             <article class="programm-form__wrapper programm-form__wrapper--tasks">
@@ -102,17 +104,21 @@
                 class="programm-form__wrap"> (владельца кота)</legend>
             <label class="programm-form__label programm-form__label--owner programm-form__label--owner-email">
               <span class="programm-form__text programm-form__text--owner">E-mail:*</span>
-              <input class="programm-form__input programm-form__input--text" type="text" value="кuklachev@gmail.com">
+              <input class="programm-form__input programm-form__input-text programm-form__input-text--owner" type="text"
+                value="кuklachev@gmail.com" required>
+              <span class="programm-form__owner-icon programm-form__owner-icon--email"></span>
             </label>
             <label class="programm-form__label programm-form__label--owner programm-form__label--owner-phone">
               <span class="programm-form__text programm-form__text--owner">Телефон:*</span>
-              <input class="programm-form__input programm-form__input--text" type="text" value="8 (960) 900-60-90">
+              <input class="programm-form__input programm-form__input-text programm-form__input-text--owner" type="text"
+                value="8 (960) 900-60-90" required>
+              <span class="programm-form__owner-icon programm-form__owner-icon--phone"></span>
             </label>
           </fieldset>
           <fieldset class="programm-form__comment">
             <legend class="programm-form__title programm-form__title--comment">Комментарий</legend>
             <label class="programm-form__label">
-              <textarea class="programm-form__input programm-form__input--text programm-form__input--comment" cols="30"
+              <textarea class="programm-form__input programm-form__input-text programm-form__input--comment" cols="30"
                 rows="8">Расскажите обо всех повадках кота</textarea>
             </label>
           </fieldset>
@@ -148,6 +154,7 @@
             <p class="programm-form__text-secondary">* – Обязательные поля</p>
           </fieldset>
         </form>
+      </div>
     </section>
     <section class="section section-contacts section-contacts--form">
       <iframe class="section-contacts__map"
