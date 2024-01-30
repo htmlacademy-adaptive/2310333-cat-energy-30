@@ -1,12 +1,17 @@
 .header {
   flex-shrink: 0;
   flex-grow: 0;
+  position: relative;
+
+  &--catalog,
+  &--form {
+    border-bottom: 1px solid $primary-decor-line-color;
+  }
 
   &__container {
     padding-top: 14px;
     padding-bottom: 14px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
@@ -16,25 +21,43 @@
     align-items: center;
     gap: 56px;
     flex-shrink: 0;
+
+    cursor: pointer;
+    transition-duration: $duration;
   }
 
-  &__cat-logo-icon {
-
+  &__cat-logo-wrapper:hover,
+  &__cat-logo-wrapper:focus {
+    opacity: 0.8;
   }
 
-  &__cat-logo-text {
-
+  &__cat-logo-wrapper:active {
+    opacity: 0.6;
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 25px;
-    padding-bottom: 25px;
+
+    &__container {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      align-items: normal;
+    }
+
+
+    &--catalog,
+    &--form {
+      border: none;
+    }
     &__cat-logo-wrapper {
       gap: 13px;
+      //margin-right: 94px;
     }
   }
   @media (min-width: $desktop-width) {
-    padding-top: 55px;
-    padding-bottom: 29px;
+
+    &__container {
+      padding-top: 55px;
+      padding-bottom: 29px;
+    }
   }
 }

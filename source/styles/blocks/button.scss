@@ -11,22 +11,80 @@
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
+  cursor: pointer;
+  transition-duration: $duration;
 
+  &:hover,
+  &:focus {
+    background-color: #5EAA2F;
+  }
 
-  &--tasks {
+  &:active {
+    color: #8EC36D;
+    background-color: #5EAA2F;
+  }
+
+  &--tasks  {
+    display: flex;
+    align-items: center;
+    width: 134px;
     line-height: 100%;
     color: #000;
     background-color: transparent;
+    padding: 4px 0;
+    margin: 0;
+    text-align: left;
+    transition-duration: $duration;
+    &::before {
+      content: "";
+      width: 17px;
+      height: 2px;
+      background-color: #000;
+      order: 2;
+      margin-left: 25px;
+      transition-duration: $duration;
+    }
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 7px solid #000;
+      order: 3;
+    }
+  }
+
+  &--tasks:hover,
+  &--tasks:focus {
+    background-color: transparent;
+    &::before {
+      width: 25px;
+    }
+  }
+
+  &--tasks:active {
+    color: #000;
+    background-color: transparent;
+    opacity: 0.3;
+    &::before {
+      width: 25px;
+    }
   }
 
   &--more-product {
-    background-color: #f2f2f2;
+    background-color: $primary-decor-background-color;
     color: #444;
   }
 
-  &--form {
-    font-size: 16px;
-    line-height: 125%;
+  &--more-product:hover,
+  &--more-product:focus {
+    background-color: #EBEBEB;
+  }
+
+  &--more-product:active {
+    color: #444;
+    background-color: #EBEBEB;
   }
 
   @media (min-width: $tablet-width) {
@@ -42,7 +100,7 @@
       font-size: 20px;
     }
 
-    &__form {
+    &--form {
       font-size: 20px;
       line-height: 130%;
       padding-top: 14px;

@@ -1,7 +1,12 @@
 .product-card {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   padding-top: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
+  &--more {
+    grid-template-columns: 1fr;
+    padding-top: 25px;
+  }
 
   &__picture {
     height: 108px;
@@ -14,10 +19,9 @@
 
   &__title {
     @include text-options("Oswald", 16px, 125%, #222, uppercase);
-    width: 76px;
     grid-column: 2/3;
     grid-row: 1/2;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     &--more {
       width: 100%;
       text-align: center;
@@ -25,6 +29,19 @@
       grid-row: 2/3;
     }
   }
+
+  &__wrap {
+    display: block;
+  }
+
+  &__wrap-tablet {
+    display: none;
+  }
+
+  &__wrap--more {
+    display: none;
+  }
+
 
   &__list {
     display: flex;
@@ -45,10 +62,11 @@
     grid-column: 1/3;
     grid-row: 3/4;
     margin-top: 17px;
-    &--more {
-      grid-column: 1/2;
-      grid-row: 4/5;
-    }
+  }
+
+  &__button-more {
+    grid-column: 1/2;
+    grid-row: 4/5;
   }
 
   &__patch {
@@ -65,7 +83,7 @@
       position: absolute;
       width: 30px;
       height: 2px;
-      background-color: $primary-decor-color;
+      background-color: #d3d3d3;
       top: 50%;
       transform: translateY(-50%);
       z-index: 2;
@@ -75,7 +93,7 @@
       position: absolute;
       width: 2px;
       height: 30px;
-      background-color: $primary-decor-color;
+      background-color: #d3d3d3;
       left: 50%;
       transform: translateX(-50%);
       z-index: 2;
@@ -88,10 +106,11 @@
     text-align: center;
     grid-column: 1/2;
     grid-row: 3/4;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr;
     position: relative;
     width: 324px;
     padding: 10px 37px 40px 37px;
@@ -104,11 +123,15 @@
       top: 81px;
       width: 100%;
       height: 430px;
-      background-color: #F2F2F2;
+      background-color: $primary-decor-background-color;
     }
     &--more::after {
       background-color: #fff;
-      border: 2px solid #F2F2F2;
+      border: 2px solid $primary-decor-background-color;
+    }
+
+    &__link {
+      z-index: 2;
     }
 
     &__picture {
@@ -119,11 +142,9 @@
       justify-content: center;
       align-items: center;
       margin-bottom: 22px;
-      z-index: 2;
     }
 
     &__title {
-      width: 135px;
       margin: 0 auto;
       font-size: 20px;
       line-height: 120%;
@@ -143,12 +164,24 @@
       }
     }
 
+    &__wrap {
+      display: none;
+    }
+
+    &__wrap-tablet {
+      display: block;
+    }
+
+    &__wrap--more {
+      display: block;
+    }
+
     &__list {
       font-size: 16px;
       line-height: 125%;
       grid-column: 1/2;
       grid-row: 3/4;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
       z-index: 2;
     }
 
@@ -156,14 +189,10 @@
       display: flex;
       flex-direction: column;
       gap: 5px;
-      margin-bottom: 12px;
+      padding-bottom: 4px;
+      margin-bottom: 7px;
       z-index: 2;
-      &::after {
-        content: "";
-        width: 100%;
-        height: 1px;
-        background-color: #CDCDCD;
-      }
+      border-bottom: 1px solid $secondary-decor-line-color;
     }
 
     &__button {
@@ -171,11 +200,12 @@
       grid-row: 4/5;
       margin-top: 0;
       z-index: 2;
-      &--more {
-        grid-column: 1/2;
-        grid-row: 4/5;
-        z-index: 2;
-      }
+    }
+
+    &__button-more {
+      grid-column: 1/2;
+      grid-row: 4/5;
+      z-index: 2;
     }
 
     &__patch {
@@ -191,7 +221,6 @@
     }
 
     &__text {
-      width: 170px;
       margin: 0 auto;
       font-size: 16px;
       line-height: 112.5%;
@@ -218,9 +247,17 @@
       }
     }
 
+    &__list {
+      margin-bottom: 29px;
+    }
+
+    &__item {
+      padding-bottom: 7px;
+      margin-bottom: 5px;
+    }
+
     &__button {
       &--more {
-        //??????????????????????????????
         grid-column: 1/2;
         grid-row: 4/5;
         z-index: 2;

@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Кирилл Третьяков](https://up.htmlacademy.ru/adaptive/30/user/2310333).
-* Наставник: [Сергей Остаповец](https://htmlacademy.ru/profile/seraphim).
+* Наставник: [Ольга Ветер](https://htmlacademy.ru/profile/id73199).
 
 ---
 

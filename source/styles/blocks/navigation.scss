@@ -5,33 +5,95 @@
 
   &__list {
     @include text-options("Oswald", 20px, 100%, #000, uppercase);
+  }
+
+//Для отображения мобильного меню необходимо
+//раскомментировать код ниже
+  &__list--mobile {
     display: none;
-    flex-basis: 198px;
+    /*display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    background-color: #fff;
+    width: 100%;*/
   }
 
-  &__item {
-    flex-shrink: 0;
+  /*&__item--mobile {
+    padding-top: 22px;
+    padding-bottom: 24px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      background-color: $primary-decor-line-color;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:first-child::before {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      background-color: $primary-decor-line-color;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  */
+
+//Для смены кнопок необходимо прописать
+//соответствующий display классам снизу
+
+  &__toggle--open {
+    display: block;
   }
 
-  /*&__toggle:hover .navigation__list {
-    display: flex;
-
-  }*/
+  &__toggle--close {
+    display: none;
+  }
 
   @media (min-width: $tablet-width) {
-    width: 436px;
+    width: 440px;
     &__list {
+      width: 436px;
       display: flex;
       flex-direction: row;
-      flex-basis: 436px;
       font-size: 18px;
       line-height: 133.333%;
       justify-content: space-between;
       flex-wrap: wrap;
     }
+
+    &__toggle--open {
+      display: none;
+    }
+
+    &__link {
+      transition-duration: $duration;
+      padding-bottom: 8px;
+    }
+
+    &__link:hover,
+    &__link:focus {
+      opacity: 0.6;
+    }
+
+    &__link:active {
+      opacity: 0.3;
+    }
+
+    &__link-current {
+      border-bottom: 2px solid $primary-button-color;
+    }
+
   }
 
   @media (min-width: $desktop-width) {
@@ -41,8 +103,12 @@
       font-size: 20px;
       line-height: 100%;
     }
-    &__list--index {
+    &__link--index {
       color: #fff;
+    }
+
+    &__link-current--index {
+      border-color: #fff;
     }
   }
 }
