@@ -9,6 +9,8 @@
   <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/favicon-apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/Lato/Lato-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/Oswald/Oswald-Regular.woff2" as="font">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -36,10 +38,10 @@
         </a>
       </article>
       <nav class="header__navigation navigation">
-        <button class="navigation__toggle navigation__toggle--open toggle toggle--open">
+        <button class="navigation__toggle navigation__toggle--open toggle toggle--open" type="button">
           <span class="visually-hidden">Открыть меню навигации.</span>
         </button>
-        <button class="navigation__toggle navigation__toggle--close toggle toggle--close">
+        <button class="navigation__toggle navigation__toggle--close toggle toggle--close" type="button">
           <span class="visually-hidden">Закрыть меню навигации.</span>
         </button>
         <ul class="navigation__list navigation__list--mobile">
@@ -177,7 +179,7 @@
     <div class="footer__container container">
       <a class="footer__cat-logo" href="#">
         <img class="footer__cat-logo-image" src="images/cat-logo-text-footer.svg" width="128" height="24"
-          alt="Cat Energy">
+          alt="Cat Energy" loading="lazy">
       </a>
       <ul class="footer__socials socials">
         <li class="socials__item">
