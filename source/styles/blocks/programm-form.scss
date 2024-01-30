@@ -232,6 +232,7 @@
     border: 1px solid $secondary-decor-line-color;
     cursor: pointer;
     transition-duration: $duration;
+    flex-shrink: 0;
     flex-wrap: wrap;
   }
 
