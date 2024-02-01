@@ -1,6 +1,7 @@
 .section-contacts {
   position: relative;
   display: grid;
+
   &--catalog,
   &--form {
     background-color: $primary-decor-background-color;
@@ -28,9 +29,14 @@
     grid-row: 2/3;
   }
 
-  &__container--catalog,
-  &__container--form {
-    background-color: $primary-decor-background-color;
+  &__map-image {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: block;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    z-index: -1;
   }
 
   &__title {
@@ -41,13 +47,12 @@
 
   &__text {
     font-size: 14px;
-    line-height: 142.857%;
+    line-height: 142.86%;
     flex-shrink: 0;
     margin-bottom: 0;
   }
 
-  @media (min-width:$tablet-width) {
-
+  @media (min-width: $tablet-width) {
     &__map {
       width: 100vw;
       height: 400px;
@@ -55,6 +60,7 @@
 
     &__wrapper {
       width: 768px;
+      margin: 0 auto;
       gap: 0;
       justify-content: space-between;
       padding: 61px 70px;
@@ -78,7 +84,6 @@
   }
 
   @media (min-width: $desktop-width) {
-
     &__container {
       background: none;
     }
@@ -91,11 +96,15 @@
       width: 566px;
       height: 199px;
       padding: 61px 80px;
-      background-color: #fff;
+      background-color: #ffffff;
       z-index: 2;
     }
 
     &__map {
+      grid-row: 1/2;
+    }
+
+    &__map-image {
       grid-row: 1/2;
     }
 

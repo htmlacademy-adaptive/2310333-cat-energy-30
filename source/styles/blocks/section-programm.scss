@@ -3,12 +3,12 @@
   padding-bottom: 18px;
 
   &__title {
-    @include text-options("Oswald", 36px, 100%, #000, none);
+    @include text-options("Oswald", 36px, 100%, #000000, none);
     margin-bottom: 36px;
   }
 
   &__text {
-    @include text-options("Oswald", 14px, 128.571%, #000, uppercase);
+    @include text-options("Oswald", 14px, 128.57%, #000000, uppercase);
     margin-bottom: 38px;
   }
 

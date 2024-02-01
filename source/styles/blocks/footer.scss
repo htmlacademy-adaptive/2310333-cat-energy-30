@@ -29,6 +29,7 @@
     position: relative;
     margin: 0 auto;
     margin-bottom: 18px;
+
     &::before,
     &::after {
       content: "";
@@ -40,6 +41,7 @@
       height: 1px;
       background-color: $primary-decor-line-color;
     }
+
     &::after {
       top: 100%;
     }
@@ -59,14 +61,11 @@
 
     &__socials {
       margin: 0;
+
       &::before,
       &::after {
         display: none;
       }
-    }
-
-    &__html-logo {
-
     }
   }
 

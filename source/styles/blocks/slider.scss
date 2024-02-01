@@ -33,11 +33,11 @@
     width: 4px;
     height: 256px;
     border-radius: 2px;
-    background-color: #666;
+    background-color: #666666;
     transition-duration: $duration;
     padding: 0;
     cursor: pointer;
-    transition-duration: $duration;
+
     &::before {
       content: "";
       position: absolute;
@@ -45,11 +45,11 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      border: 2px solid #666;
+      border: 2px solid #666666;
       transition-duration: $duration;
-      background-color: #fff;
-      transition-duration: $duration;
+      background-color: #ffffff;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -57,12 +57,9 @@
       width: 24px;
       height: 18px;
       mask-image: url("../../images/icons/stack.svg#slider-button");
-      -webkit-mask-image: url("../../images/icons/stack.svg#slider-button");
       mask-repeat: no-repeat;
-      -webkit-mask-repeat: no-repeat;
       mask-size: 24px 18px;
-      -webkit-mask-size: 24px 18px;
-      background-color: #666;
+      background-color: #666666;
       transition-duration: $duration;
     }
   }
@@ -70,21 +67,25 @@
   &__button:hover,
   &__button:focus {
     background-color: $primary-button-color;
+
     &::before {
       border-color: $primary-button-color;
     }
+
     &::after {
       background-color: $primary-button-color;
     }
   }
 
   &__button:active {
-    background-color: #9ECC82;
+    background-color: #9ecc82;
+
     &::before {
-      border-color: #9ECC82;
+      border-color: #9ecc82;
     }
+
     &::after {
-      background-color: #9ECC82
+      background-color: #9ecc82;
     }
   }
 
@@ -92,6 +93,7 @@
     width: 560px;
     height: 512px;
     margin: 0 auto;
+
     &__button {
       height: 512px;
     }
