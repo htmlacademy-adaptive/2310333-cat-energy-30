@@ -5,11 +5,11 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 20px
+    gap: 20px;
   }
 
   &__title {
-    @include text-options("Oswald", 24px, 154.167%, #000, uppercase);
+    @include text-options("Oswald", 24px, 154.17%, #000, uppercase);
     margin-top: 0;
     margin-bottom: 29px;
     margin-left: 70px;
@@ -17,7 +17,7 @@
 
   &__text {
     font-size: 14px;
-    line-height: 128.571%;
+    line-height: 128.58%;
     margin-bottom: 15px;
     padding-bottom: 23px;
     border-bottom: 1px solid $primary-decor-line-color;
@@ -26,7 +26,8 @@
   &__wrapper {
     position: relative;
     padding: 30px 24px 18px 20px;
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
+
     &::before {
       content: "";
       position: absolute;
@@ -34,7 +35,7 @@
       left: 20px;
       width: 50px;
       height: 50px;
-      background-color: #68B738;
+      background-color: #68b738;
       border-radius: 50%;
       z-index: 1;
     }
@@ -64,7 +65,7 @@
     }
   }
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 45px;
 
     &__container {
@@ -73,27 +74,27 @@
 
     &__wrapper {
       padding: 77px 52px 58px 52px;
+    }
 
-      &::before {
-        width: 200px;
-        height: 200px;
-        top: 92px;
-        left: 445px;
-      }
+    &__wrapper::before {
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      left: 445px;
+    }
 
-      &--slim-cat::after {
-        width: 140px;
-        height: 194px;
-        top: 81px;
-        left: 475px;
-      }
+    &__wrapper--slim-cat::after {
+      width: 140px;
+      height: 194px;
+      top: 81px;
+      left: 475px;
+    }
 
-      &--pro-cat::after {
-        width: 268px;
-        height: 112px;
-        top: 135px;
-        left: 411px;
-      }
+    &__wrapper--pro-cat::after {
+      width: 268px;
+      height: 112px;
+      top: 135px;
+      left: 411px;
     }
 
     &__title {
@@ -107,9 +108,9 @@
       width: 330px;
       font-size: 16px;
       line-height: 150%;
-      color: #000;
+      color: #000000;
       padding-bottom: 0;
-      margin-bottom: 54px;
+      margin-bottom: 53px;
       border: none;
     }
 
@@ -128,32 +129,34 @@
     &__container {
       flex-direction: row;
       gap: 80px;
+      flex-wrap: wrap;
     }
 
     &__wrapper {
       width: 570px;
       padding-bottom: 60px;
+      flex-shrink: 0;
+    }
 
-      &::before {
-        width: 100px;
-        height: 100px;
-        top: 47px;
-        left: 52px;
-      }
+    &__wrapper::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
 
-      &--slim-cat::after {
-        width: 70px;
-        height: 97px;
-        top: 41px;
-        left: 67px;
-      }
+    &__wrapper--slim-cat::after {
+      width: 70px;
+      height: 97px;
+      top: 41px;
+      left: 67px;
+    }
 
-      &--pro-cat::after {
-        width: 134px;
-        height: 56px;
-        top: 67px;
-        left: 33px;
-      }
+    &__wrapper--pro-cat::after {
+      width: 134px;
+      height: 56px;
+      top: 67px;
+      left: 33px;
     }
 
     &__title {

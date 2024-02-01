@@ -2,11 +2,11 @@
   margin-bottom: 49px;
 
   &__container {
-    padding-right: 21px
+    padding-right: 21px;
   }
 
   &__title {
-    @include text-options("Oswald", 36px, 111.111%, #000, none);
+    @include text-options("Oswald", 36px, 111.11%, #000000, none);
     margin-bottom: 40px;
   }
 
@@ -21,12 +21,13 @@
     display: flex;
     gap: 20px;
     align-items: center;
+
     &::before {
       content: "";
       display: block;
       width: 60px;
       height: 60px;
-      background-color: #68B738;
+      background-color: #68b738;
       flex-shrink: 0;
     }
 
@@ -68,7 +69,7 @@
 
   &__text {
     font-size: 14px;
-    line-height: 128.571%;
+    line-height: 128.57%;
     margin-bottom: 0;
   }
 
@@ -108,77 +109,76 @@
       gap: 31px;
       background-repeat: no-repeat;
       background-position-y: center;
-      &::before {
-        width: 80px;
-        height: 80px;
-      }
+    }
 
-      &::after {
-        top: 25px;
-        left: 27px;
-      }
+    &__item::before {
+      width: 80px;
+      height: 80px;
+    }
 
-      &--natural {
-        background-image: url("../../images/icons/stack.svg#1");
-        background-size: 70px 228px;
-        grid-column: 1/3;
-        grid-row: 1/3;
-        background-position-x: 127px;
-      }
+    &__item::after {
+      top: 25px;
+      left: 27px;
+    }
 
-      &--simple {
-        background-image: url("../../images/icons/stack.svg#2");
-        background-size: 112px 228px;
-        grid-column: 3/5;
-        grid-row: 1/3;
-        background-position-x: 122px;
-      }
+    &__item--natural {
+      background-image: url("../../images/icons/stack.svg#1");
+      background-size: 70px 228px;
+      grid-column: 1/3;
+      grid-row: 1/3;
+      background-position-x: 127px;
+    }
 
-      &--useful {
-        background-image: url("../../images/icons/stack.svg#3");
-        background-size: 112px 228px;
-        grid-column: 1/3;
-        grid-row: 3/5;
-        background-position-x: 124px;
-      }
+    &__item--simple {
+      background-image: url("../../images/icons/stack.svg#2");
+      background-size: 112px 228px;
+      grid-column: 3/5;
+      grid-row: 1/3;
+      background-position-x: 122px;
+    }
 
-      &--resultative {
-        background-image: url("../../images/icons/stack.svg#4");
-        background-size: 120px 228px;
-        grid-column: 3/5;
-        grid-row: 3/5;
-        background-position-x: 125px;
-      }
+    &__item--useful {
+      background-image: url("../../images/icons/stack.svg#3");
+      background-size: 112px 228px;
+      grid-column: 1/3;
+      grid-row: 3/5;
+      background-position-x: 124px;
+    }
+
+    &__item--resultative {
+      background-image: url("../../images/icons/stack.svg#4");
+      background-size: 120px 228px;
+      grid-column: 3/5;
+      grid-row: 3/5;
+      background-position-x: 125px;
     }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 80px;
+
     &__list {
       gap: 79px;
     }
 
-    &__item {
-      &--natural {
-        grid-column: 1/2;
-        grid-row: 1/5;
-      }
+    &__item--natural {
+      grid-column: 1/2;
+      grid-row: 1/5;
+    }
 
-      &--simple {
-        grid-column: 2/3;
-        grid-row: 1/5;
-      }
+    &__item--simple {
+      grid-column: 2/3;
+      grid-row: 1/5;
+    }
 
-      &--useful {
-        grid-column: 3/4;
-        grid-row: 1/5;
-      }
+    &__item--useful {
+      grid-column: 3/4;
+      grid-row: 1/5;
+    }
 
-      &--resultative {
-        grid-column: 4/5;
-        grid-row: 1/5;
-      }
+    &__item--resultative {
+      grid-column: 4/5;
+      grid-row: 1/5;
     }
   }
-
 }

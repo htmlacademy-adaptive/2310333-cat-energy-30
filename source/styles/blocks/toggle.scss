@@ -1,14 +1,16 @@
 .toggle {
   position: relative;
   border: none;
-  background: #fff;
+  background: #ffffff;
   padding: 0;
   height: 18px;
+
   &--open {
     width: 24px;
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
   }
+
   &--open::after {
     content: "";
     position: absolute;
@@ -18,12 +20,14 @@
     display: block;
     width: 24px;
     height: 2px;
-    background-color: #000;
+    background-color: #000000;
   }
+
   &--close {
     width: 18px;
     transform: rotate(45deg);
   }
+
   &--close::before {
     content: "";
     position: absolute;
@@ -32,8 +36,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: #000;
+    background-color: #000000;
   }
+
   &--close::after {
     content: "";
     position: absolute;
@@ -42,7 +47,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: #000;
+    background-color: #000000;
   }
 
   @media (min-width: $tablet-width) {

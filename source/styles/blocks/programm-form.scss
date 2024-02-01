@@ -1,10 +1,10 @@
 .programm-form {
   @include text-options("Oswald", 16px, 112.5%, #444, uppercase);
 
-//FIELDSET - about-cat
+  //FIELDSET - about-cat
 
   &__title {
-    @include text-options("Oswald", 24px, 108.333%, #000, none);
+    @include text-options("Oswald", 24px, 108.33%, #000, none);
   }
 
   &__about-cat {
@@ -15,6 +15,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+
     &::after {
       content: "";
       position: absolute;
@@ -25,10 +26,12 @@
       left: 50%;
       transform: translateX(-50%);
     }
+
     &--cat {
       padding-bottom: 24px;
       margin-bottom: 22px;
     }
+
     &--tasks {
       padding-bottom: 19px;
     }
@@ -69,7 +72,7 @@
 
   &__input-text {
     width: 100%;
-    border: 1px solid #E7E7E7;
+    border: 1px solid #e7e7e7;
     border-radius: none;
     padding: 14px 14px 13px 15px;
     transition-duration: $duration;
@@ -80,12 +83,12 @@
   }
 
   &__input-text:focus {
-    box-shadow: 0 0 0 2px #444;
+    box-shadow: 0 0 0 2px #444444;
     outline: none;
   }
 
   &__input-text:invalid {
-    box-shadow: 0 0 0 2px #FF8282;
+    box-shadow: 0 0 0 2px #ff8282;
     outline: none;
   }
 
@@ -102,15 +105,13 @@
 
   &__custom-radio:hover,
   &__custom-radio:focus {
-    border-color: #BABABA;
+    border-color: #bababa;
   }
 
   &__input--radio,
   &__input--checkbox {
     position: absolute;
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
   }
 
   &__input--radio:disabled ~ &__radio {
@@ -129,7 +130,7 @@
     background-color: $primary-button-color;
   }
 
-//FIELDSET - about-owner
+  //FIELDSET - about-owner
   &__about-owner {
     margin-bottom: 24px;
   }
@@ -152,10 +153,9 @@
 
   &__owner-icon {
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     position: absolute;
     right: 0;
+
     &::after {
       content: "";
       position: absolute;
@@ -163,8 +163,7 @@
       transform: translateY(-50%);
       right: 14px;
       mask-repeat: no-repeat;
-      -webkit-mask-repeat: no-repeat;
-      background-color: #000;
+      background-color: #000000;
     }
   }
 
@@ -172,18 +171,14 @@
     width: 17px;
     height: 13px;
     mask-image: url("../../images/icons/stack.svg#email");
-    -webkit-mask-image: url("../../images/icons/stack.svg#email");
     mask-size: 17px auto;
-    -webkit-mask-size: 17px auto;
   }
 
   &__owner-icon--phone::after {
     width: 15px;
     height: 15px;
     mask-image: url("../../images/icons/stack.svg#phone");
-    -webkit-mask-image: url("../../images/icons/stack.svg#phone");
     mask-size: 15px auto;
-    -webkit-mask-size: 15px auto;
   }
 
   &__input-text--owner:focus + &__owner-icon::after {
@@ -191,10 +186,10 @@
   }
 
   &__input-text--owner:invalid + &__owner-icon::after {
-    background-color: #FF8282;
+    background-color: #ff8282;
   }
 
-//FIELDSET - comment
+  //FIELDSET - comment
   &__comment {
     margin-bottom: 23px;
   }
@@ -207,7 +202,7 @@
     max-height: 150px;
   }
 
-//FIELDSET - extra
+  //FIELDSET - extra
   &__extra {
     margin-bottom: 34px;
   }
@@ -238,7 +233,7 @@
 
   &__custom-checkbox:hover,
   &__custom-checkbox:focus {
-    border-color: #BABABA;
+    border-color: #bababa;
   }
 
   &__input--checkbox:disabled ~ &__checkbox {
@@ -264,7 +259,7 @@
   }
 
   &__text-secondary {
-    @include text-options("Lato", 14px, 114.286%, #000, none);
+    @include text-options("Lato", 14px, 114.29%, #000000, none);
     text-align: center;
   }
 
@@ -275,6 +270,7 @@
   &__title--extra {
     width: fit-content;
     position: relative;
+
     &::before,
     &::after {
       content: "";
@@ -286,6 +282,7 @@
       transform: translateY(-50%);
       right: calc(100% + 20px);
     }
+
     &::after {
       left: calc(100% + 20px);
     }
@@ -309,12 +306,14 @@
       &::after {
         display: none;
       }
+
       &--cat {
         padding-bottom: 0;
         margin-bottom: 72px;
       }
+
       &--tasks {
-        border: 1px solid #E7E7E7;
+        border: 1px solid #e7e7e7;
         padding: 23px 27px 27px 27px;
       }
     }
@@ -453,7 +452,6 @@
   }
 
   @media (min-width: $desktop-width) {
-
     &__about-cat {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -461,16 +459,15 @@
       margin-bottom: 70px;
     }
 
-    &__wrapper {
-      &--cat {
-        margin-bottom: 0;
-        grid-column: 1/2;
-        grid-row: 1/2;
-      }
-      &--tasks {
-        grid-column: 2/3;
-        grid-row: 1/2;
-      }
+    &__wrapper--cat {
+      margin-bottom: 0;
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+
+    &__wrapper--tasks {
+      grid-column: 2/3;
+      grid-row: 1/2;
     }
 
     &__about-owner {
@@ -547,6 +544,5 @@
       grid-row: 1/2;
       text-align: left;
     }
-
   }
 }

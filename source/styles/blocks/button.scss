@@ -1,12 +1,12 @@
 .button {
   display: block;
   background-color: $primary-button-color;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 125%;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   width: 100%;
   padding-top: 10px;
@@ -16,41 +16,43 @@
 
   &:hover,
   &:focus {
-    background-color: #5EAA2F;
+    background-color: #5eaa2f;
   }
 
   &:active {
-    color: #8EC36D;
-    background-color: #5EAA2F;
+    color: #8ec36d;
+    background-color: #5eaa2f;
   }
 
-  &--tasks  {
+  &--tasks {
     display: flex;
     align-items: center;
-    width: 134px;
+    width: fit-content;
     line-height: 100%;
-    color: #000;
+    color: #000000;
     background-color: transparent;
     padding: 4px 0;
     margin: 0;
     text-align: left;
     transition-duration: $duration;
+
     &::before {
       content: "";
       width: 17px;
       height: 2px;
-      background-color: #000;
+      background-color: #000000;
       order: 2;
-      margin-left: 25px;
+      margin-left: 17px;
       transition-duration: $duration;
     }
+
     &::after {
       content: "";
       width: 0;
       height: 0;
       border-top: 5px solid transparent;
       border-bottom: 5px solid transparent;
-      border-left: 7px solid #000;
+      border-left: 7px solid #000000;
       order: 3;
     }
   }
@@ -58,15 +60,17 @@
   &--tasks:hover,
   &--tasks:focus {
     background-color: transparent;
+
     &::before {
       width: 25px;
     }
   }
 
   &--tasks:active {
-    color: #000;
+    color: #000000;
     background-color: transparent;
     opacity: 0.3;
+
     &::before {
       width: 25px;
     }
@@ -74,21 +78,20 @@
 
   &--more-product {
     background-color: $primary-decor-background-color;
-    color: #444;
+    color: #444444;
   }
 
   &--more-product:hover,
   &--more-product:focus {
-    background-color: #EBEBEB;
+    background-color: #ebebeb;
   }
 
   &--more-product:active {
-    color: #444;
-    background-color: #EBEBEB;
+    color: #444444;
+    background-color: #ebebeb;
   }
 
   @media (min-width: $tablet-width) {
-
     &--hero {
       font-size: 20px;
       line-height: 130%;
@@ -100,6 +103,10 @@
       font-size: 20px;
     }
 
+    &--tasks::before {
+      margin-left: 27px;
+    }
+
     &--form {
       font-size: 20px;
       line-height: 130%;
@@ -107,5 +114,4 @@
       padding-bottom: 14px;
     }
   }
-
 }

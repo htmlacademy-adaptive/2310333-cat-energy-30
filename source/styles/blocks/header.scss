@@ -36,7 +36,6 @@
   }
 
   @media (min-width: $tablet-width) {
-
     &__container {
       padding-top: 25px;
       padding-bottom: 25px;
@@ -48,13 +47,13 @@
     &--form {
       border: none;
     }
+
     &__cat-logo-wrapper {
       gap: 13px;
-      //margin-right: 94px;
     }
   }
-  @media (min-width: $desktop-width) {
 
+  @media (min-width: $desktop-width) {
     &__container {
       padding-top: 55px;
       padding-bottom: 29px;
