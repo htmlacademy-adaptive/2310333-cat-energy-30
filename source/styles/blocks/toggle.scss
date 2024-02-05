@@ -5,6 +5,10 @@
   padding: 0;
   height: 18px;
 
+  &--nojs {
+    display: none;
+  }
+
   &--open {
     width: 24px;
     border-top: 2px solid #000000;
