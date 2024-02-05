@@ -16,6 +16,14 @@
     align-items: center;
   }
 
+
+  //Ниже класс, имитирующий отключенный JS
+
+  &__container--nojs {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
   &__cat-logo-wrapper {
     display: flex;
     align-items: center;
@@ -24,6 +32,11 @@
 
     cursor: pointer;
     transition-duration: $duration;
+  }
+
+  &__cat-logo-wrapper--nojs {
+    margin-right: auto;
+    margin-bottom: 14px;
   }
 
   &__cat-logo-wrapper:hover,
@@ -42,6 +55,9 @@
       align-items: normal;
     }
 
+    &__container--nojs {
+      flex-direction: row;
+    }
 
     &--catalog,
     &--form {
@@ -49,6 +65,8 @@
     }
 
     &__cat-logo-wrapper {
+      margin-right: 0;
+      margin-bottom: 0;
       gap: 13px;
     }
   }
